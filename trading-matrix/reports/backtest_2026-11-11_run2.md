@@ -373,9 +373,9 @@ These tracks are STOP as built. The figures are quoted from reports/backtest_202
 - Trend is BTCUSDT USD-M perpetual, taker in and taker out, entry at the next 1m open, exit at the window end, funding applied.
 - Lens input is 500 closed bars resampled from closed 1m candles: 5m for the 1h window, 15m for the 4h window. SIDEWAYS is stored and not counted.
 - Markov window 20, MARKOV_K 1.0, RSI 14, MACD 12/26/9, Bollinger 20/2. One voter. No weight modulation.
-- S1 BTC EXTENDED and S2 GOLD EXTENDED are the maker EXTENDED tracks (frozen ids X1 and X2). The trigger uses the setup score, then the ensemble voter or the aggTrade delta. The delta is not a track. Trigger is the cost gate, then the setup score, then the ensemble or the delta. The delta is aggTrade buy versus sell volume over the last 3 closed 1m candles. No bookTicker. QUICK is not mixed in.
+- S1 BTC EXTENDED and S2 GOLD EXTENDED are the maker EXTENDED tracks (frozen ids X1 and X2). Trigger is the cost gate, then the setup score, then the ensemble voter or the aggTrade delta over the last 3 closed 1m candles. No bookTicker. QUICK is not mixed in.
 - WIN pays maker + maker. LOSS and TIMEOUT pay maker + taker. Spread 0.0001 is assumed because the bookTicker archive returns 404. Slippage is 0.0001.
-- fapi.binance.com exchangeInfo returned HTTP 451. Tick sizes BTCUSDT 0.10 and XAUUSDT 0.01 were not tuned.
+- fapi.binance.com exchangeInfo returned HTTP 451. The ticks that were frozen are BTCUSDT 0.10 and XAUUSDT 0.01 from https://testnet.binancefuture.com/fapi/v1/exchangeInfo. They were not tuned.
 - The metal fee was not confirmed. Gold uses FEE_FUT_MAKER and FEE_FUT_TAKER.
 - Gold missing minutes in the loaded archive: 0. No news calendar, so blackout is false. AI and visual lenses stay excluded.
 - Gold's blocked-by-cost count is the whole 2025-12 to 2026-10 archive, because the walk is continuous. The counted calls, the net, and the verdict use only the last 20%.
