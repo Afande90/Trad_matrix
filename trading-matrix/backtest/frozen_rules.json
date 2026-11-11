@@ -1,39 +1,75 @@
 {
+  "K": 6,
   "ai_visual": "excluded",
   "assumed_spread_pct": 0.0001,
+  "book_confirmation": false,
+  "btc_develop": "2024-11 to 2026-05",
+  "btc_holdout_end": "2024-11-01",
+  "btc_holdout_start": "2022-11-01",
   "closed_candles_only": true,
   "entry": "next candle open",
+  "exit": "window end",
   "extended_max_min": 60,
-  "from": "2024-11",
-  "majority": "all voters must agree",
+  "fee_fut_maker": 0.0002,
+  "fee_fut_taker": 0.0005,
+  "gold_from": "2025-12",
+  "gold_split": "60/20/20",
+  "gold_to": "2026-10",
+  "lens_lookback": 500,
   "markov_k": 1.0,
   "markov_window": 20,
   "max_breakeven_wr": 0.5,
   "min_reward_cost_ratio": 3.0,
   "min_signal_score": 4.5,
   "min_vol_ratio": 0.6,
-  "note": "No parameter was tuned on train or validate. One rule set.",
-  "prediction_interval_minutes": 15,
-  "quick_max_min": 15,
+  "note": "Rule set 2. No parameter was tuned. Reported K is 6, the six tracks. z is z_for_k(6) = 3.09. rule_sets_tried is 2 so the second try is visible.",
+  "one_position_at_a_time": true,
+  "outcome_cost": {
+    "LOSS": "maker+taker+spread+slippage",
+    "TIMEOUT": "maker+taker+spread+slippage",
+    "WIN": "maker+maker+spread+slippage"
+  },
   "random_seed": 1,
-  "rule_sets_tried": 1,
-  "scalp_fee_mode": "taker",
+  "resample": {
+    "1h": "5m",
+    "4h": "15m"
+  },
+  "rule_sets_tried": 2,
+  "s5": "aggTrade delta only",
+  "scalp_class": "EXTENDED",
+  "scalp_fee_mode": "maker",
   "scalp_rr": 1.5,
+  "scalp_trigger": "either",
+  "seen_period_end": "2026-11-01",
+  "seen_period_start": "2026-06-08",
+  "sideways_counted": false,
+  "slippage_pct": 0.0001,
   "symbols": [
     "BTCUSDT",
     "XAUUSDT"
   ],
-  "to": "2026-10",
+  "tick_size": {
+    "BTCUSDT": "0.10",
+    "XAUUSDT": "0.01"
+  },
+  "tick_source": "fapi.binance.com exchangeInfo returned HTTP 451; ticks were not tuned",
   "tracks": [
-    "CRYPTO",
-    "SCALP_QUICK",
-    "SCALP_EXTENDED",
-    "SCALP_METAL_QUICK",
-    "SCALP_METAL_EXTENDED"
+    "T1",
+    "T2",
+    "T3",
+    "T4",
+    "X1",
+    "X2"
   ],
-  "trend_voters": [
-    "markov",
-    "technical"
-  ],
-  "verification_window_minutes": 15
+  "trend_fee_mode": "taker",
+  "trend_market": "USD-M perpetual",
+  "trend_venue": "futures",
+  "voters": {
+    "T1_MOMENTUM_1H": "markov",
+    "T2_MOMENTUM_4H": "markov",
+    "T3_REVERSION_1H": "technical",
+    "T4_REVERSION_4H": "technical"
+  },
+  "z": 3.09,
+  "z_source": "z_for_k(6)"
 }

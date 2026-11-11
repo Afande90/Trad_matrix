@@ -20,7 +20,14 @@ def should_trigger(
     s5: LensResult | None,
     gate_blocked: bool,
     min_score: float = 4.5,
+    mode: str = "both",
+    require: str | None = None,
 ) -> bool:
+    """`mode` defaults to both voters. `require='either'` is the run-2 rule.
+
+    Passing `require` wins over `mode`. The default stays both-agree so the
+    run-1 tests keep their meaning.
+    """
     if gate_blocked:
         return False
     if s1_score < min_score:
@@ -30,7 +37,9 @@ def should_trigger(
         votes += 1
     if agrees(s5, s1_direction):
         votes += 1
-    return votes >= 2
+    chosen = require if require is not None else mode
+    need = 1 if chosen == "either" else 2
+    return votes >= need
 
 
 def scalp_confidence(s1_score: float, s2: LensResult | None, profile_multiplier: float) -> float:

@@ -39,6 +39,22 @@ def slippage_pct() -> float:
     return _env_float("SLIPPAGE_PCT", 0.0001)
 
 
+def scalp_outcome_cost(outcome: str, venue: str, spread_pct: float) -> float | None:
+    """Maker entry. A winning limit exit pays maker again. A stop or a time
+    exit is a market order and pays taker. NOT_FILLED has no cost.
+    """
+    if outcome == "NOT_FILLED":
+        return None
+    maker = side_fee(venue, "maker")
+    taker = side_fee(venue, "taker")
+    extra = float(spread_pct) + slippage_pct()
+    if outcome == "WIN":
+        return float(maker + maker + extra)
+    if outcome in ("LOSS", "TIMEOUT"):
+        return float(maker + taker + extra)
+    return None
+
+
 def round_trip_cost(asset_class: str, venue: str, fee_mode: str, spread_pct: float) -> float:
     """Total cost of entering AND exiting, as a fraction of price.
 

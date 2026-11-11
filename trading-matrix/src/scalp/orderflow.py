@@ -23,6 +23,25 @@ def delta_ratio(trades: list[tuple[float, bool]]) -> float:
     return (buy - sell) / total
 
 
+def delta_only_lens(trades: list[tuple[float, bool]]) -> LensResult | None:
+    """Run 2 lens S5. Buy volume versus sell volume. No book. Silent if there
+    are no trades or the two sides are equal.
+    """
+    if not trades:
+        return None
+    ratio = delta_ratio(trades)
+    if ratio == 0.0:
+        return None
+    direction = "UP" if ratio > 0 else "DOWN"
+    return LensResult(
+        "orderflow",
+        direction,
+        min(1.0, abs(ratio)),
+        f"delta_ratio {ratio:.3f} book not used",
+        {"delta_ratio": ratio, "book": False, "silent": False},
+    )
+
+
 def orderflow_lens(trades: list[tuple[float, bool]], bid_qty: float | None, ask_qty: float | None) -> LensResult | None:
     if bid_qty is None or ask_qty is None:
         return None
