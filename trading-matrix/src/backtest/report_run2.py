@@ -237,19 +237,21 @@ def render_run2(result: dict) -> str:
     for track, verdict in zip(tracks, verdicts):
         lines.append(f"- {track.get('label')}: {verdict}")
     lines.append("")
-    stopped = [verdict in _STOP for verdict in verdicts]
-    if any(stopped):
-        lines.append("Tracks that are STOP or NOT PROVEN stop for good.")
-    if any(verdict == "TOO EARLY" for verdict in verdicts):
-        lines.append("Tracks that are TOO EARLY are not rerun. They continue only as live paper tracking.")
-    if any(verdict == "RERUN" for verdict in verdicts):
-        lines.append("An honesty check failed on the RERUN tracks. No conclusions from those tracks.")
-    if verdicts and not any(verdict == "CONTINUE" for verdict in verdicts):
+    if verdicts and all(verdict in _STOP for verdict in verdicts):
         lines.append(
-            "No track reached CONTINUE. Stop building trading features. "
-            "The measuring engine and Trader School still stand. Wait for the operator."
+            "Stop building trading features. The measuring engine and Trader School still stand. "
+            "Wait for the operator."
         )
     elif any(verdict == "CONTINUE" for verdict in verdicts):
         lines.append("A track that cleared the ladder is a ticket to paper calls with the frozen rules, not to money.")
+    else:
+        if any(verdict in _STOP for verdict in verdicts):
+            lines.append("Tracks that are STOP or NOT PROVEN stop for good.")
+        if any(verdict == "TOO EARLY" for verdict in verdicts):
+            lines.append("Tracks that are TOO EARLY are not rerun. They continue only as live paper tracking.")
+        if any(verdict == "RERUN" for verdict in verdicts):
+            lines.append("An honesty check failed on the RERUN tracks. No conclusions from those tracks.")
+        if verdicts:
+            lines.append("No track reached CONTINUE. This is the final rerun. Wait for the operator.")
     lines.append("")
     return "\n".join(lines)

@@ -468,7 +468,7 @@ def execute(argv=None) -> Path:
             "Trend is BTCUSDT USD-M perpetual, taker in and taker out, entry at the next 1m open, exit at the window end, funding applied.",
             "Lens input is 500 closed bars resampled from closed 1m candles: 5m for the 1h window, 15m for the 4h window. SIDEWAYS is stored and not counted.",
             "Markov window 20, MARKOV_K 1.0, RSI 14, MACD 12/26/9, Bollinger 20/2. One voter. No weight modulation.",
-            "S1 and S2 are maker EXTENDED scalps (frozen ids X1 and X2). Trigger is the cost gate, then the setup score, then the ensemble or the delta. The delta is aggTrade buy versus sell volume over the last 3 closed 1m candles. No bookTicker. QUICK is not mixed in.",
+            "X1 BTC EXTENDED and X2 GOLD EXTENDED are the maker EXTENDED tracks. Trigger is the cost gate, then the setup score, then the ensemble voter or the aggTrade delta over the last 3 closed 1m candles. No bookTicker. QUICK is not mixed in.",
             "WIN pays maker + maker. LOSS and TIMEOUT pay maker + taker. Spread 0.0001 is assumed because the bookTicker archive returns 404. Slippage is 0.0001.",
             "fapi.binance.com exchangeInfo returned HTTP 451. Tick sizes BTCUSDT 0.10 and XAUUSDT 0.01 were not tuned.",
             "The metal fee was not confirmed. Gold uses FEE_FUT_MAKER and FEE_FUT_TAKER.",

@@ -359,7 +359,7 @@
       "symbol": "BTCUSDT"
     },
     {
-      "label": "S1 BTC EXTENDED",
+      "label": "X1 BTC EXTENDED",
       "counted": 13394,
       "days_with_calls": 600,
       "gross_mean": -1.4552196723321143e-05,
@@ -435,7 +435,7 @@
       "symbol": "BTCUSDT"
     },
     {
-      "label": "S2 GOLD EXTENDED",
+      "label": "X2 GOLD EXTENDED",
       "counted": 59,
       "days_with_calls": 13,
       "gross_mean": 0.0003754641625629353,
@@ -512,13 +512,13 @@
       "net_mean": 0.00021917267304547928
     },
     {
-      "label": "S1 BTC EXTENDED",
+      "label": "X1 BTC EXTENDED",
       "counted": 3503,
       "net_mean": 0.0016049355192181796,
       "kind": "ceiling"
     },
     {
-      "label": "S2 GOLD EXTENDED",
+      "label": "X2 GOLD EXTENDED",
       "counted": 3503,
       "net_mean": 0.000600927920286768,
       "kind": "ceiling"
@@ -533,7 +533,7 @@
     "Trend is BTCUSDT USD-M perpetual, taker in and taker out, entry at the next 1m open, exit at the window end, funding applied.",
     "Lens input is 500 closed bars resampled from closed 1m candles: 5m for the 1h window, 15m for the 4h window. SIDEWAYS is stored and not counted.",
     "Markov window 20, MARKOV_K 1.0, RSI 14, MACD 12/26/9, Bollinger 20/2. One voter. No weight modulation.",
-    "S1 BTC EXTENDED and S2 GOLD EXTENDED are the maker EXTENDED tracks (frozen ids X1 and X2). Trigger is the cost gate, then the setup score, then the ensemble voter or the aggTrade delta over the last 3 closed 1m candles. No bookTicker. QUICK is not mixed in.",
+    "X1 BTC EXTENDED and X2 GOLD EXTENDED are the maker EXTENDED tracks. Trigger is the cost gate, then the setup score, then the ensemble voter or the aggTrade delta over the last 3 closed 1m candles. No bookTicker. QUICK is not mixed in.",
     "WIN pays maker + maker. LOSS and TIMEOUT pay maker + taker. Spread 0.0001 is assumed because the bookTicker archive returns 404. Slippage is 0.0001.",
     "fapi.binance.com exchangeInfo returned HTTP 451. The ticks that were frozen are BTCUSDT 0.10 and XAUUSDT 0.01 from https://testnet.binancefuture.com/fapi/v1/exchangeInfo. They were not tuned.",
     "The metal fee was not confirmed. Gold uses FEE_FUT_MAKER and FEE_FUT_TAKER.",

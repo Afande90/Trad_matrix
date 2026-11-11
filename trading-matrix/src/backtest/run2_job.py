@@ -632,15 +632,15 @@ def run() -> None:
 
     nonlocal_cost = [True]
     btc_scalp_row, rnd_scalp = scalp_track(
-        "S1 BTC EXTENDED",
-        "S1",
+        "X1 BTC EXTENDED",
+        "X1",
         "BTCUSDT",
         oracle_btc_scalp,
         True,
         scalp_btc,
         btc_days,
         btc_dates,
-        "Maker entry. EXTENDED only. Trigger is S2 or S5. Gold is a separate track.",
+        "Maker entry. EXTENDED only. Trigger is the cost gate, S1 score, and S2 or S5. Gold is a separate track.",
         None,
     )
     gold_note = (
@@ -648,8 +648,8 @@ def run() -> None:
         "The history is short. Expect TOO EARLY unless the ceiling itself is below zero, which stops the track first."
     )
     gold_row, _rnd_gold = scalp_track(
-        "S2 GOLD EXTENDED",
-        "S2",
+        "X2 GOLD EXTENDED",
+        "X2",
         "XAUUSDT",
         oracle_gold,
         True,
@@ -721,14 +721,14 @@ def run() -> None:
         _seen_trend(2, "T3 REVERSION 1h", seen_oracle_1h, seen_1h_run),
         _seen_trend(3, "T4 REVERSION 4h", seen_oracle_4h, seen_4h_run),
         {
-            "label": "S1 BTC EXTENDED",
+            "label": "X1 BTC EXTENDED",
             "counted": 0 if seen_scalp is None else summarize_split(seen_scalp["records"], seen_days, Z, scalp=True)["counted"],
             "net_mean": None if seen_scalp is None else summarize_split(seen_scalp["records"], seen_days, Z, scalp=True)["net_mean"],
             "oracle_gross": seen_oracle_scalp.get("gross"),
             "oracle_net": seen_oracle_scalp.get("net"),
             "oracle_cost": seen_oracle_scalp.get("cost"),
         },
-        {"label": "S2 GOLD EXTENDED", "counted": 0, "net_mean": None, "oracle_net": None},
+        {"label": "X2 GOLD EXTENDED", "counted": 0, "net_mean": None, "oracle_net": None},
     ]
     if seen_scalp is not None:
         seen_summary = summarize_split(seen_scalp["records"], seen_days, Z, scalp=True)

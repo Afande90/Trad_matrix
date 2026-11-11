@@ -10,8 +10,8 @@ track | oracle gross | cost | oracle net | break-even hit rate
 | T2 MOMENTUM 4h | 0.006267 | 0.001200 | 0.005067 | 0.595744
 | T3 REVERSION 1h | 0.003087 | 0.001200 | 0.001887 | 0.694364
 | T4 REVERSION 4h | 0.006267 | 0.001200 | 0.005067 | 0.595744
-| S1 BTC EXTENDED | 0.003087 | 0.000900 | 0.002187 | 0.645773
-| S2 GOLD EXTENDED | 0.001402 | 0.000900 | 0.000502 | 0.820914
+| X1 BTC EXTENDED | 0.003087 | 0.000900 | 0.002187 | 0.645773
+| X2 GOLD EXTENDED | 0.001402 | 0.000900 | 0.000502 | 0.820914
 
 ## Step 1
 
@@ -32,8 +32,8 @@ T1 MOMENTUM 1h | 4521 | 729 | 6 | -0.000105 | -0.001307 | -0.009521 | -0.002507 
 T2 MOMENTUM 4h | 1170 | 611 | 6 | 0.000074 | -0.001130 | -0.003269 | -0.002330 | -0.000641 | STOP as built
 T3 REVERSION 1h | 917 | 529 | 6 | 0.000371 | -0.000827 | -0.001967 | -0.002027 | -0.001602 | STOP as built
 T4 REVERSION 4h | 266 | 228 | 6 | -0.000143 | -0.001342 | -0.001266 | -0.002542 | -0.000736 | TOO EARLY
-S1 BTC EXTENDED | 13394 | 600 | 6 | -0.000015 | -0.000808 | -0.017564 | -0.001601 | -0.000866 | STOP this track
-S2 GOLD EXTENDED | 59 | 13 | 6 | 0.000375 | -0.000401 | -0.001731 | -0.001179 | -0.000899 | TOO EARLY
+X1 BTC EXTENDED | 13394 | 600 | 6 | -0.000015 | -0.000808 | -0.017564 | -0.001601 | -0.000866 | STOP this track
+X2 GOLD EXTENDED | 59 | 13 | 6 | 0.000375 | -0.000401 | -0.001731 | -0.001179 | -0.000899 | TOO EARLY
 
 ## T1 MOMENTUM 1h
 
@@ -256,7 +256,7 @@ Step 4 verdict: **TOO EARLY**
 - Step 3 flags:
   - spread_assumed is true on every call (bookTicker archive 404); COST x2 is required
 
-## S1 BTC EXTENDED
+## X1 BTC EXTENDED
 
 Step 4 verdict: **STOP this track**
 - Holdout dates: 2022-11-01 → 2024-11-01. Validate: n/a. 2024-11 to 2026-05 was a sanity check only.
@@ -311,7 +311,7 @@ Step 4 verdict: **STOP this track**
 - Step 3 flags:
   - spread_assumed is true on every call (bookTicker archive 404); COST x2 is required
 
-## S2 GOLD EXTENDED
+## X2 GOLD EXTENDED
 
 Step 4 verdict: **TOO EARLY**
 - Holdout dates: Gold archive 2025-12 → 2026-11-01, split 60/20/20. Holdout 2026-08-26 → 2026-11-01. The archive is short, so TOO EARLY is the expected honest result. This is not a quiet pass.
@@ -361,8 +361,8 @@ These tracks are STOP as built. The figures are quoted from reports/backtest_202
 - T2 MOMENTUM 4h: counted 230 net mean -0.001132 (not evidence)
 - T3 REVERSION 1h: counted 169 net mean -0.001456 (not evidence)
 - T4 REVERSION 4h: counted 52 net mean 0.000219 (not evidence)
-- S1 BTC EXTENDED: oracle windows 3503 oracle net 0.001605. This is the window oracle, not a strategy result, and it is not evidence.
-- S2 GOLD EXTENDED: oracle windows 3503 oracle net 0.000601. This is the window oracle, not a strategy result, and it is not evidence.
+- X1 BTC EXTENDED: oracle windows 3503 oracle net 0.001605. This is the window oracle, not a strategy result, and it is not evidence.
+- X2 GOLD EXTENDED: oracle windows 3503 oracle net 0.000601. This is the window oracle, not a strategy result, and it is not evidence.
 
 ## Scope
 
@@ -373,7 +373,7 @@ These tracks are STOP as built. The figures are quoted from reports/backtest_202
 - Trend is BTCUSDT USD-M perpetual, taker in and taker out, entry at the next 1m open, exit at the window end, funding applied.
 - Lens input is 500 closed bars resampled from closed 1m candles: 5m for the 1h window, 15m for the 4h window. SIDEWAYS is stored and not counted.
 - Markov window 20, MARKOV_K 1.0, RSI 14, MACD 12/26/9, Bollinger 20/2. One voter. No weight modulation.
-- S1 BTC EXTENDED and S2 GOLD EXTENDED are the maker EXTENDED tracks (frozen ids X1 and X2). Trigger is the cost gate, then the setup score, then the ensemble voter or the aggTrade delta over the last 3 closed 1m candles. No bookTicker. QUICK is not mixed in.
+- X1 BTC EXTENDED and X2 GOLD EXTENDED are the maker EXTENDED tracks. Trigger is the cost gate, then the setup score, then the ensemble voter or the aggTrade delta over the last 3 closed 1m candles. No bookTicker. QUICK is not mixed in.
 - WIN pays maker + maker. LOSS and TIMEOUT pay maker + taker. Spread 0.0001 is assumed because the bookTicker archive returns 404. Slippage is 0.0001.
 - fapi.binance.com exchangeInfo returned HTTP 451. The ticks that were frozen are BTCUSDT 0.10 and XAUUSDT 0.01 from https://testnet.binancefuture.com/fapi/v1/exchangeInfo. They were not tuned.
 - The metal fee was not confirmed. Gold uses FEE_FUT_MAKER and FEE_FUT_TAKER.
@@ -386,9 +386,9 @@ These tracks are STOP as built. The figures are quoted from reports/backtest_202
 - T2 MOMENTUM 4h: STOP as built
 - T3 REVERSION 1h: STOP as built
 - T4 REVERSION 4h: TOO EARLY
-- S1 BTC EXTENDED: STOP this track
-- S2 GOLD EXTENDED: TOO EARLY
+- X1 BTC EXTENDED: STOP this track
+- X2 GOLD EXTENDED: TOO EARLY
 
 Tracks that are STOP or NOT PROVEN stop for good.
 Tracks that are TOO EARLY are not rerun. They continue only as live paper tracking.
-No track reached CONTINUE. Stop building trading features. The measuring engine and Trader School still stand. Wait for the operator.
+No track reached CONTINUE. This is the final rerun. Wait for the operator.
