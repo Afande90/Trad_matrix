@@ -297,7 +297,8 @@ def test_report_order_decision_seen_and_retired():
     assert "9489" in text
     decision = text.split("## DECISION")[1]
     assert "live paper" in decision
-    assert "Stop building trading features" not in decision
+    assert "Stop building trading features" in decision
+    assert "measuring engine" in decision
     # A huge seen-period mean must not become a track verdict.
     verdict_lines = [ln for ln in decision.splitlines() if ln.startswith("- ")]
     assert verdict_lines
@@ -324,7 +325,7 @@ def test_mix_headline_and_decision_diverge():
     assert "Stop building" not in text.splitlines()[0]
     decision = text.split("## DECISION")[1]
     assert "Stop building" not in text.splitlines()[0]
-    assert "Stop building trading features" not in decision
+    assert "Stop building trading features" in decision
     assert "stop for good" in decision
     assert "live paper" in decision
     both_stopped = {

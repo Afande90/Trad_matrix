@@ -124,7 +124,8 @@
       "beats_baselines": false,
       "unexplained_flags": [],
       "profit_spread_over_months": true,
-      "note": null
+      "note": null,
+      "symbol": "BTCUSDT"
     },
     {
       "label": "T2 MOMENTUM 4h",
@@ -199,7 +200,8 @@
       "beats_baselines": false,
       "unexplained_flags": [],
       "profit_spread_over_months": false,
-      "note": null
+      "note": null,
+      "symbol": "BTCUSDT"
     },
     {
       "label": "T3 REVERSION 1h",
@@ -277,7 +279,8 @@
         "hit rate 0.648 is above the suspicion line"
       ],
       "profit_spread_over_months": false,
-      "note": null
+      "note": null,
+      "symbol": "BTCUSDT"
     },
     {
       "label": "T4 REVERSION 4h",
@@ -352,10 +355,11 @@
       "beats_baselines": false,
       "unexplained_flags": [],
       "profit_spread_over_months": true,
-      "note": null
+      "note": null,
+      "symbol": "BTCUSDT"
     },
     {
-      "label": "X1 BTC EXTENDED",
+      "label": "S1 BTC EXTENDED",
       "counted": 13394,
       "days_with_calls": 600,
       "gross_mean": -1.4552196723321143e-05,
@@ -427,10 +431,11 @@
       "beats_baselines": false,
       "unexplained_flags": [],
       "profit_spread_over_months": true,
-      "note": null
+      "note": null,
+      "symbol": "BTCUSDT"
     },
     {
-      "label": "X2 GOLD EXTENDED",
+      "label": "S2 GOLD EXTENDED",
       "counted": 59,
       "days_with_calls": 13,
       "gross_mean": 0.0003754641625629353,
@@ -481,7 +486,8 @@
       "beats_baselines": false,
       "unexplained_flags": [],
       "profit_spread_over_months": false,
-      "note": "Gold archive starts 2025-12. The 20% holdout is a short sample. TOO EARLY is expected when the count or the days fall short. XAUUSDT fee was not confirmed; using FEE_FUT_MAKER and FEE_FUT_TAKER."
+      "note": "Gold archive starts 2025-12. The 20% holdout is a short sample. TOO EARLY is expected when the count or the days fall short. XAUUSDT fee was not confirmed; using FEE_FUT_MAKER and FEE_FUT_TAKER.",
+      "symbol": "XAUUSDT"
     }
   ],
   "seen_tracks": [
@@ -506,14 +512,16 @@
       "net_mean": 0.00021917267304547928
     },
     {
-      "label": "X1 BTC EXTENDED ceiling",
+      "label": "S1 BTC EXTENDED",
       "counted": 3503,
-      "net_mean": 0.0016049355192181796
+      "net_mean": 0.0016049355192181796,
+      "kind": "ceiling"
     },
     {
-      "label": "X2 GOLD EXTENDED ceiling",
+      "label": "S2 GOLD EXTENDED",
       "counted": 3503,
-      "net_mean": 0.000600927920286768
+      "net_mean": 0.000600927920286768,
+      "kind": "ceiling"
     }
   ],
   "run1_text": "No track beats doing nothing after costs on the holdout. Stop building trading features. The measuring rules still stand.\n\nK = 5 (tracks 5 \u00d7 rule sets 1). z = 2.88.\nAI/visual lenses excluded. Trend results are the 2-voter system (Markov + technical) and say nothing about the live 4-voter system.\n\n## Step 1 \u2014 is the machine honest?\n\n- RANDOM control: net -0.002145 vs cost target -0.002200 (reference n=2000, counted directional calls=0)\n- PEEK control: gross 0.000387 net -0.001813 hit 0.600995 n=13471; window-oracle net -0.000946\n- Truncation test: identical: yes\n- Entry price: next candle open\n- Costs applied: cost_pct > 0 on counted calls; fees from round_trip_cost\n- Holdout ledger: rules file frozen_rules.json registered before holdout rows were judged\n- Rule sets tried (K): K=5 = 5 tracks \u00d7 1 rule set\n- Same-candle cases: trend has no bracket; scalp same-candle aggTrades 0, counted as loss 0 (no setup reached a bracket)\n- Data gaps: BTC missing minutes 0 (0.0000% of the spanned minutes)\n\n## One-line summary (HOLDOUT)\n\ntrack | counted | days | K | gross mean | net mean | net_lb (daily) | net mean cost x2 | RANDOM net | verdict\nBTC trend | 0 | 0 | 5 | n/a | n/a | 0.000000 | n/a | n/a | TOO EARLY\nBTC quick scalps | 0 | 0 | 5 | n/a | n/a | 0.000000 | n/a | n/a | TOO EARLY\nBTC extended scalps | 0 | 0 | 5 | n/a | n/a | 0.000000 | n/a | n/a | TOO EARLY\ngold quick scalps | 0 | 0 | 5 | n/a | n/a | 0.000000 | n/a | n/a | TOO EARLY\ngold extended scalps | 0 | 0 | 5 | n/a | n/a | 0.000000 | n/a | n/a | TOO EARLY\n\n## BTC trend\n\nToo early to say. 0 of 300 calls so far on BTC trend.\n\nStep 4 verdict: **TOO EARLY**\n\n- Split dates: train 2024-11-01 \u2192 2026-01-13 | validate 2026-01-13 \u2192 2026-06-08 | holdout 2026-06-08 \u2192 2026-11-01\n- Days containing calls (holdout): 0\n- Counted calls: 0\n- Holdout decisions by direction (SIDEWAYS and ABSTAIN are not counted): ABSTAIN 4527, SIDEWAYS 9489\n- K and z: 5 / 2.88\n- Gross mean per call: n/a\n- Net mean per call: n/a\n- net_lb on daily totals: 0.000000\n- Hit rate: n/a  hit_lb: n/a\n- Baselines: ALWAYS_UP=0.0000, ALWAYS_DOWN=0.0000, PERSISTENCE=0.0000, COIN=0.5000, baseline_hit=0.5000\n- Net mean at COST x2: n/a  x3: n/a\n- VALIDATE net mean: n/a  HOLDOUT net mean: n/a\n- Wins / losses / timeouts / blocked-by-cost / NOT_FILLED: 0 / 0 / 0 / 0 / 0\n- Same-candle: aggTrades 0, counted as loss 0\n- Maker fill rate, would-be winners vs losers: n/a (market orders) vs n/a (market orders)\n- Max drawdown in R: 0.000  longest losing streak: 0\n- spread_assumed share: 1.000  funding_ignored share: 0.000\n- Ladder level the holdout would have reached: Observer\n- RANDOM net mean: n/a  PEEK net mean: -0.001813\n- Net by month:\n- Net by symbol: BTCUSDT n/a\n- Step 3 flags:\n- spread_assumed is true on every call (bookTicker archive 404); COST x2 is required\n- Flag notes: Spread is the archive default BT_ASSUMED_SPREAD_PCT because monthly bookTicker 404s.\n\n## BTC quick scalps\n\nToo early to say. 0 of 300 calls so far on BTC quick scalps.\n\nStep 4 verdict: **TOO EARLY**\n\n- Split dates: train 2024-11-01 \u2192 2026-01-13 | validate 2026-01-13 \u2192 2026-06-08 | holdout 2026-06-08 \u2192 2026-11-01\n- Days containing calls (holdout): 0\n- Counted calls: 0\n- Cost gate on the holdout: blocked 210160, passed 0, triggered 0 (no book, order flow stays silent)\n- K and z: 5 / 2.88\n- Gross mean per call: n/a\n- Net mean per call: n/a\n- net_lb on daily totals: 0.000000\n- Hit rate: n/a  hit_lb: n/a\n- Baselines: ALWAYS_UP=0.0000, ALWAYS_DOWN=0.0000, PERSISTENCE=0.0000, COIN=0.5000, baseline_hit=0.5000\n- Net mean at COST x2: n/a  x3: n/a\n- VALIDATE net mean: n/a  HOLDOUT net mean: n/a\n- Wins / losses / timeouts / blocked-by-cost / NOT_FILLED: 0 / 0 / 0 / 210160 / 0\n- Same-candle: aggTrades 0, counted as loss 0\n- Maker fill rate, would-be winners vs losers: n/a (taker run, no scalp fills) vs n/a (taker run, no scalp fills)\n- Max drawdown in R: 0.000  longest losing streak: 0\n- spread_assumed share: 1.000  funding_ignored share: 0.000\n- Ladder level the holdout would have reached: Observer\n- RANDOM net mean: n/a  PEEK net mean: -0.001813\n- Net by month:\n- Net by symbol: BTCUSDT n/a\n- Step 3 flags:\n- spread_assumed is true on every call (bookTicker archive 404); COST x2 is required\n- cost gate blocked the bars; order-flow bookTicker is not in the archive so no setup was forced through\n- Flag notes: Spread is the archive default BT_ASSUMED_SPREAD_PCT because monthly bookTicker 404s.\n\n## BTC extended scalps\n\nToo early to say. 0 of 300 calls so far on BTC extended scalps.\n\nStep 4 verdict: **TOO EARLY**\n\n- Split dates: train 2024-11-01 \u2192 2026-01-13 | validate 2026-01-13 \u2192 2026-06-08 | holdout 2026-06-08 \u2192 2026-11-01\n- Days containing calls (holdout): 0\n- Counted calls: 0\n- Cost gate on the holdout: blocked 210038, passed 26, triggered 0 (no book, order flow stays silent)\n- K and z: 5 / 2.88\n- Gross mean per call: n/a\n- Net mean per call: n/a\n- net_lb on daily totals: 0.000000\n- Hit rate: n/a  hit_lb: n/a\n- Baselines: ALWAYS_UP=0.0000, ALWAYS_DOWN=0.0000, PERSISTENCE=0.0000, COIN=0.5000, baseline_hit=0.5000\n- Net mean at COST x2: n/a  x3: n/a\n- VALIDATE net mean: n/a  HOLDOUT net mean: n/a\n- Wins / losses / timeouts / blocked-by-cost / NOT_FILLED: 0 / 0 / 0 / 210038 / 0\n- Same-candle: aggTrades 0, counted as loss 0\n- Maker fill rate, would-be winners vs losers: n/a (taker run, no scalp fills) vs n/a (taker run, no scalp fills)\n- Max drawdown in R: 0.000  longest losing streak: 0\n- spread_assumed share: 1.000  funding_ignored share: 0.000\n- Ladder level the holdout would have reached: Observer\n- RANDOM net mean: n/a  PEEK net mean: -0.001813\n- Net by month:\n- Net by symbol: BTCUSDT n/a\n- Step 3 flags:\n- spread_assumed is true on every call (bookTicker archive 404); COST x2 is required\n- Flag notes: Spread is the archive default BT_ASSUMED_SPREAD_PCT because monthly bookTicker 404s.\n\n## gold quick scalps\n\nToo early to say. 0 of 300 calls so far on gold quick scalps.\n\nStep 4 verdict: **TOO EARLY**\n\n- Split dates: train 2024-11-01 \u2192 2026-01-13 | validate 2026-01-13 \u2192 2026-06-08 | holdout 2026-06-08 \u2192 2026-11-01\n- Days containing calls (holdout): 0\n- Counted calls: 0\n- Cost gate on the holdout: blocked 210160, passed 0, triggered 0 (no book, order flow stays silent)\n- K and z: 5 / 2.88\n- Gross mean per call: n/a\n- Net mean per call: n/a\n- net_lb on daily totals: 0.000000\n- Hit rate: n/a  hit_lb: n/a\n- Baselines: ALWAYS_UP=0.0000, ALWAYS_DOWN=0.0000, PERSISTENCE=0.0000, COIN=0.5000, baseline_hit=0.5000\n- Net mean at COST x2: n/a  x3: n/a\n- VALIDATE net mean: n/a  HOLDOUT net mean: n/a\n- Wins / losses / timeouts / blocked-by-cost / NOT_FILLED: 0 / 0 / 0 / 210160 / 0\n- Same-candle: aggTrades 0, counted as loss 0\n- Maker fill rate, would-be winners vs losers: n/a (taker run, no scalp fills) vs n/a (taker run, no scalp fills)\n- Max drawdown in R: 0.000  longest losing streak: 0\n- spread_assumed share: 1.000  funding_ignored share: 0.000\n- Ladder level the holdout would have reached: Observer\n- RANDOM net mean: n/a  PEEK net mean: -0.001813\n- Net by month:\n- Net by symbol: XAUUSDT n/a\n- Step 3 flags:\n- spread_assumed is true on every call (bookTicker archive 404); COST x2 is required\n- cost gate blocked the bars; order-flow bookTicker is not in the archive so no setup was forced through\n- Flag notes: Spread is the archive default BT_ASSUMED_SPREAD_PCT because monthly bookTicker 404s.\n\n## gold extended scalps\n\nToo early to say. 0 of 300 calls so far on gold extended scalps.\n\nStep 4 verdict: **TOO EARLY**\n\n- Split dates: train 2024-11-01 \u2192 2026-01-13 | validate 2026-01-13 \u2192 2026-06-08 | holdout 2026-06-08 \u2192 2026-11-01\n- Days containing calls (holdout): 0\n- Counted calls: 0\n- Cost gate on the holdout: blocked 209999, passed 65, triggered 0 (no book, order flow stays silent)\n- K and z: 5 / 2.88\n- Gross mean per call: n/a\n- Net mean per call: n/a\n- net_lb on daily totals: 0.000000\n- Hit rate: n/a  hit_lb: n/a\n- Baselines: ALWAYS_UP=0.0000, ALWAYS_DOWN=0.0000, PERSISTENCE=0.0000, COIN=0.5000, baseline_hit=0.5000\n- Net mean at COST x2: n/a  x3: n/a\n- VALIDATE net mean: n/a  HOLDOUT net mean: n/a\n- Wins / losses / timeouts / blocked-by-cost / NOT_FILLED: 0 / 0 / 0 / 209999 / 0\n- Same-candle: aggTrades 0, counted as loss 0\n- Maker fill rate, would-be winners vs losers: n/a (taker run, no scalp fills) vs n/a (taker run, no scalp fills)\n- Max drawdown in R: 0.000  longest losing streak: 0\n- spread_assumed share: 1.000  funding_ignored share: 0.000\n- Ladder level the holdout would have reached: Observer\n- RANDOM net mean: n/a  PEEK net mean: -0.001813\n- Net by month:\n- Net by symbol: XAUUSDT n/a\n- Step 3 flags:\n- spread_assumed is true on every call (bookTicker archive 404); COST x2 is required\n- Flag notes: Spread is the archive default BT_ASSUMED_SPREAD_PCT because monthly bookTicker 404s.\n\n## Scope\n\n- Trend numbers are the 2-voter system. They say nothing about the live 4-voter system; that record starts at zero.\n- AI and visual lenses are excluded.\n- Monthly bookTicker is not on data.binance.vision for these symbols (HTTP 404). Spread is BT_ASSUMED_SPREAD_PCT and every record is spread_assumed=true.\n- XAUUSDT/XAGUSDT fee was not confirmed on Binance's fee page; FEE_FUT_TAKER is used and a warning is logged.\n- XAUUSDT klines on the archive start in 2025-12, not 2024-11. Months before that 404.\n- Spot BTC klines change from millisecond to microsecond timestamps during 2025. Both are normalized to milliseconds.\n- Order-flow confirmation needs bookTicker. Without it the scalp lens stays silent. Setups are not invented.\n- QUICK and EXTENDED are separate tracks and are not added together.\n- News blackout calendar is not bundled. blackout is false.\n- Perpetual funding is applied for futures when the archive file exists. Spot has no funding.\n",
@@ -525,10 +533,11 @@
     "Trend is BTCUSDT USD-M perpetual, taker in and taker out, entry at the next 1m open, exit at the window end, funding applied.",
     "Lens input is 500 closed bars resampled from closed 1m candles: 5m for the 1h window, 15m for the 4h window. SIDEWAYS is stored and not counted.",
     "Markov window 20, MARKOV_K 1.0, RSI 14, MACD 12/26/9, Bollinger 20/2. One voter. No weight modulation.",
-    "X1 and X2 are maker EXTENDED scalps. S1, S2 and S5 are lens names, not track names. Trigger is the cost gate, then the setup score, then the ensemble or the delta. The delta is aggTrade buy versus sell volume over the last 3 closed 1m candles. No bookTicker. QUICK is not mixed in.",
+    "S1 BTC EXTENDED and S2 GOLD EXTENDED are the maker EXTENDED tracks (frozen ids X1 and X2). The trigger uses the setup score, then the ensemble voter or the aggTrade delta. The delta is not a track. Trigger is the cost gate, then the setup score, then the ensemble or the delta. The delta is aggTrade buy versus sell volume over the last 3 closed 1m candles. No bookTicker. QUICK is not mixed in.",
     "WIN pays maker + maker. LOSS and TIMEOUT pay maker + taker. Spread 0.0001 is assumed because the bookTicker archive returns 404. Slippage is 0.0001.",
     "fapi.binance.com exchangeInfo returned HTTP 451. Tick sizes BTCUSDT 0.10 and XAUUSDT 0.01 were not tuned.",
     "The metal fee was not confirmed. Gold uses FEE_FUT_MAKER and FEE_FUT_TAKER.",
-    "Gold missing minutes in the loaded archive: 0. No news calendar, so blackout is false. AI and visual lenses stay excluded."
+    "Gold missing minutes in the loaded archive: 0. No news calendar, so blackout is false. AI and visual lenses stay excluded.",
+    "Gold's blocked-by-cost count is the whole 2025-12 to 2026-10 archive, because the walk is continuous. The counted calls, the net, and the verdict use only the last 20%."
   ]
 }

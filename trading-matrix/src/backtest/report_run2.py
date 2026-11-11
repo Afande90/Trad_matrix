@@ -217,9 +217,15 @@ def render_run2(result: dict) -> str:
     lines.append("")
     lines.append("2026-06-08 to 2026-11-01. These numbers never feed a verdict.")
     for row in result.get("seen_tracks") or []:
-        lines.append(
-            f"- {row.get('label')}: counted {row.get('counted')} net mean {_num(row.get('net_mean'))} (not evidence)"
-        )
+        if row.get("kind") == "ceiling":
+            lines.append(
+                f"- {row.get('label')}: oracle windows {row.get('counted')} oracle net {_num(row.get('net_mean'))}. "
+                "This is the window oracle, not a strategy result, and it is not evidence."
+            )
+        else:
+            lines.append(
+                f"- {row.get('label')}: counted {row.get('counted')} net mean {_num(row.get('net_mean'))} (not evidence)"
+            )
     lines.append("")
     lines.append("## Scope")
     lines.append("")
@@ -238,14 +244,12 @@ def render_run2(result: dict) -> str:
         lines.append("Tracks that are TOO EARLY are not rerun. They continue only as live paper tracking.")
     if any(verdict == "RERUN" for verdict in verdicts):
         lines.append("An honesty check failed on the RERUN tracks. No conclusions from those tracks.")
-    if verdicts and all(verdict in _STOP for verdict in verdicts):
+    if verdicts and not any(verdict == "CONTINUE" for verdict in verdicts):
         lines.append(
-            "Stop building trading features. The measuring engine and Trader School still stand. "
-            "Wait for the operator."
+            "No track reached CONTINUE. Stop building trading features. "
+            "The measuring engine and Trader School still stand. Wait for the operator."
         )
     elif any(verdict == "CONTINUE" for verdict in verdicts):
         lines.append("A track that cleared the ladder is a ticket to paper calls with the frozen rules, not to money.")
-    else:
-        lines.append("This is the final rerun. Wait for the operator.")
     lines.append("")
     return "\n".join(lines)
