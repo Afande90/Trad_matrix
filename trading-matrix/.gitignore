@@ -1,0 +1,14 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+node_modules/
+dist/
+data/history/
+backtest/*.sqlite
+backtest/*.duckdb
+exports/
+diagnostics/
+.coverage
+htmlcov/

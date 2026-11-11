@@ -1,0 +1,39 @@
+{
+  "ai_visual": "excluded",
+  "assumed_spread_pct": 0.0001,
+  "closed_candles_only": true,
+  "entry": "next candle open",
+  "extended_max_min": 60,
+  "from": "2024-11",
+  "majority": "all voters must agree",
+  "markov_k": 1.0,
+  "markov_window": 20,
+  "max_breakeven_wr": 0.5,
+  "min_reward_cost_ratio": 3.0,
+  "min_signal_score": 4.5,
+  "min_vol_ratio": 0.6,
+  "note": "No parameter was tuned on train or validate. One rule set.",
+  "prediction_interval_minutes": 15,
+  "quick_max_min": 15,
+  "random_seed": 1,
+  "rule_sets_tried": 1,
+  "scalp_fee_mode": "taker",
+  "scalp_rr": 1.5,
+  "symbols": [
+    "BTCUSDT",
+    "XAUUSDT"
+  ],
+  "to": "2026-10",
+  "tracks": [
+    "CRYPTO",
+    "SCALP_QUICK",
+    "SCALP_EXTENDED",
+    "SCALP_METAL_QUICK",
+    "SCALP_METAL_EXTENDED"
+  ],
+  "trend_voters": [
+    "markov",
+    "technical"
+  ],
+  "verification_window_minutes": 15
+}
