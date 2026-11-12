@@ -19,6 +19,15 @@
         "XAUUSDT"
       ],
       "written_at": "2026-11-11T18:38:34.798534+00:00"
+    },
+    {
+      "rules_hash": "a3c2dbc5f9a76adc98dfb8866dfe3ace72d4cc212c953097a3d899d1adde29d9",
+      "holdout_start": "2020-11-01",
+      "holdout_end": "2022-10-31",
+      "symbols": [
+        "BTCUSDT"
+      ],
+      "written_at": "2026-11-12T02:24:46.727736+00:00"
     }
   ]
 }

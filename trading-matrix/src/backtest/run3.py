@@ -438,8 +438,10 @@ def scan_train(root: Path) -> dict:
         reason = "both train variants had fewer than 300 calls"
     elif kept == "AGAINST":
         reason = "AGAINST had the higher TRAIN net mean per call"
+    elif stats["WITH"].get("net_mean") == stats["AGAINST"].get("net_mean"):
+        reason = "the TRAIN net means were equal, so WITH was kept"
     else:
-        reason = "WITH had the higher TRAIN net mean per call, or the two means were equal"
+        reason = "WITH had the higher TRAIN net mean per call"
     return {"stats": stats, "kept": kept, "keep_reason": reason, "truncation_ok": scanned["truncation_ok"]}
 
 

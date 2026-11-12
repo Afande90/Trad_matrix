@@ -1,0 +1,181 @@
+{
+  "K": 2,
+  "z": 2.88,
+  "rule_sets_tried": 3,
+  "step1_ok": true,
+  "step1": [
+    {
+      "check": "RANDOM control",
+      "result": "net -0.0011264301275881667 vs cost target -0.0008999999999999998 (n=2000)",
+      "ok": true
+    },
+    {
+      "check": "WINDOW ORACLE",
+      "result": "wiring ok",
+      "ok": true
+    },
+    {
+      "check": "Truncation test",
+      "result": "identical: yes",
+      "ok": true
+    },
+    {
+      "check": "Entry price",
+      "result": "maker limit at the setup price; later aggTrades must trade through by one tick",
+      "ok": true
+    },
+    {
+      "check": "Costs applied",
+      "result": "cost_pct > 0 on counted calls",
+      "ok": true
+    },
+    {
+      "check": "Holdout ledger",
+      "result": "registered before the holdout was read",
+      "ok": true
+    },
+    {
+      "check": "Rule sets tried (K)",
+      "result": "rule_sets_tried = 3. Reported K = 2. z = 2.88.",
+      "ok": true
+    },
+    {
+      "check": "Same-candle cases",
+      "result": "count shown; resolved by aggTrades or counted as loss",
+      "ok": true
+    },
+    {
+      "check": "Data gaps",
+      "result": "missing minutes 0.0000% of the spanned minutes",
+      "ok": true
+    }
+  ],
+  "kept": "WITH",
+  "keep_reason": "WITH train net mean -0.000806 was higher than AGAINST -0.000855",
+  "train": {
+    "WITH": {
+      "counted": 593,
+      "days_with_calls": 283,
+      "gross_mean": -1.2404460570681862e-05,
+      "net_mean": -0.000806157276759552
+    },
+    "AGAINST": {
+      "counted": 681,
+      "days_with_calls": 304,
+      "gross_mean": -5.399872361788665e-05,
+      "net_mean": -0.0008549894578322772
+    }
+  },
+  "track": {
+    "label": "BTC COMPLETE SENTENCE",
+    "kind": "scalp",
+    "symbol": "BTCUSDT",
+    "counted": 1868,
+    "days_with_calls": 549,
+    "gross_mean": 2.4032601977189314e-05,
+    "net_mean": -0.0007673190950249519,
+    "net_lb": -0.002849041204208046,
+    "net_mean_x2": -0.0015581113862455087,
+    "net_mean_x3": -0.0023489036774660657,
+    "random_net": -0.0011264301275881667,
+    "breakeven_wr_mean": 0.4674136603822528,
+    "hit_rate": 0.3640256959314775,
+    "hit_lb": 0.3326301422635631,
+    "baselines": {
+      "ALWAYS_UP": 0.3640256959314775,
+      "ALWAYS_DOWN": 0.6359743040685225,
+      "PERSISTENCE": 0.5224839400428265,
+      "COIN": 0.5,
+      "baseline_hit": 0.6359743040685225
+    },
+    "beats_baselines": false,
+    "oracle_gross": 0.005380100256407116,
+    "oracle_cost": 0.0009,
+    "oracle_net": 0.004480100256407116,
+    "breakeven_hit_rate": 0.5836415640143692,
+    "oracle_wiring_ok": true,
+    "wins": 680,
+    "losses": 1040,
+    "timeouts": 148,
+    "blocked": 399309,
+    "not_filled": 60,
+    "maker_fill_winners": "0.9392",
+    "maker_fill_losers": "0.9877",
+    "same_candle_trades": 1,
+    "same_candle_loss": 0,
+    "max_dd_r": 416.42726147830075,
+    "max_dd_net": 1.4410032961845591,
+    "losing_streak": 14,
+    "level": "Observer",
+    "spread_assumed_share": 1.0,
+    "funding_ignored_share": 0.0,
+    "net_by_month": {
+      "2020-11": -0.025109834798805065,
+      "2020-12": -0.12217066514818788,
+      "2021-01": -0.024382024903578544,
+      "2021-02": -0.19206951148558146,
+      "2021-03": 0.008147507163544815,
+      "2021-04": -0.06925101925223248,
+      "2021-05": 0.031034858372083238,
+      "2021-06": -0.04089634860281213,
+      "2021-07": -0.042329869848313544,
+      "2021-08": -0.14307645094863414,
+      "2021-09": -0.06423039850805295,
+      "2021-10": -0.01646553787323909,
+      "2021-11": -0.054849017251904095,
+      "2021-12": -0.03484128466117143,
+      "2022-01": -0.022139940380088766,
+      "2022-02": -0.02665407925416602,
+      "2022-03": -0.07353067233763143,
+      "2022-04": -0.07725742255337166,
+      "2022-05": -0.08977970323371287,
+      "2022-06": -0.12407675217451948,
+      "2022-07": -0.13983506719414,
+      "2022-08": -0.04119108164208927,
+      "2022-09": -0.03138174860055989,
+      "2022-10": -0.017016004389445817
+    },
+    "flags": [
+      "spread_assumed is true on every call (bookTicker archive 404); COST x2 is required"
+    ],
+    "unexplained_flags": [],
+    "profit_spread_over_months": false,
+    "holdout_dates": "2020-11-01 \u2192 2022-10-31",
+    "note": "No news calendar is bundled. The exception is the 1m range versus ATR(1m) only."
+  },
+  "diagnostic": [
+    {
+      "role": "governor",
+      "counted": 3539,
+      "net_mean": -0.0008256530472808189
+    },
+    {
+      "role": "doer",
+      "counted": 3785,
+      "net_mean": -0.0007176896029036524
+    },
+    {
+      "role": "target",
+      "counted": 20497,
+      "net_mean": -0.0009227218849964873
+    },
+    {
+      "role": "exception",
+      "counted": 1890,
+      "net_mean": -0.0007659994859657132
+    }
+  ],
+  "scope": [
+    "Rule set 3. K = 2 because WITH and AGAINST were both run on TRAIN. z = 2.88. rule_sets_tried = 3.",
+    "The kept variant was chosen on TRAIN net mean per call only. Nothing else was changed.",
+    "Holdout 2020-11-01 to 2022-10-31 was registered before it was read, and the kept variant was run once.",
+    "No news calendar is bundled. The exception role is the last closed 1m range versus 3 x ATR(1m).",
+    "Governor: closed 15m EMA20 and EMA50. Doer: aggTrade buy share over the last 3 closed 1m candles.",
+    "Target: previous UTC day high, low, or volume point of control from profile.py, within 0.25 x ATR(5m).",
+    "State: maker EXTENDED cost gate and the dead-market filter (1m ATR below 0.6 of its 10-bar average).",
+    "Bracket, fill, and costs match X1. WIN is maker+maker. LOSS and TIMEOUT are maker+taker. Spread 0.0001 is assumed.",
+    "BTCUSDT tick 0.10 was carried from run 2 and was not tuned.",
+    "Diagnostic rows switch one role off on the holdout. They are not evidence and they do not choose a variant.",
+    "Run 1 and run 2 ledger rows are unchanged."
+  ]
+}
