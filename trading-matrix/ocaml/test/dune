@@ -1,0 +1,11 @@
+(test
+ (name test_match)
+ (libraries sentence unix)
+ (deps fixture.txt)
+ (modules test_match))
+
+(test
+ (name test_trades)
+ (libraries sentence unix)
+ (deps expected_first50.txt)
+ (modules test_trades))

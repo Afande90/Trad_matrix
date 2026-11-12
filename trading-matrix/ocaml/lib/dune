@@ -1,0 +1,4 @@
+(library
+ (name sentence)
+ (wrapped false)
+ (libraries unix))
