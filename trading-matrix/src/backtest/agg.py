@@ -60,6 +60,7 @@ class AggCursor:
         lo = None
         hi = None
         prices: list[tuple[int, float]] = []
+        bins: dict[float, float] = {}
         while True:
             row = self._read()
             if row is None:
@@ -76,10 +77,12 @@ class AggCursor:
                 buy += qty
             lo = price if lo is None else min(lo, price)
             hi = price if hi is None else max(hi, price)
+            binkey = round(price * 10.0) / 10.0
+            bins[binkey] = bins.get(binkey, 0.0) + qty
             if keep_prices:
                 prices.append((ts, price))
         else:
             self._minute = None
         if self._eof and self._held is None:
             self._minute = None
-        return {"minute": minute, "buy": buy, "sell": sell, "min": lo, "max": hi, "prices": prices}
+        return {"minute": minute, "buy": buy, "sell": sell, "min": lo, "max": hi, "prices": prices, "bins": bins}

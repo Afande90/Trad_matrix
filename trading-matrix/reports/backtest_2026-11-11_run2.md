@@ -54,7 +54,7 @@ Step 4 verdict: **STOP this track**
 - Hit rate: 0.4225  hit_lb: 0.4000
 - Net mean at COST x2: -0.002507  x3: -0.003707
 - VALIDATE net mean: n/a  HOLDOUT net mean: -0.001307
-- Max drawdown in R: 4940.647  longest losing streak: 12
+- Max drawdown of cumulative net: 592.8776%  longest losing streak: 12
 - spread_assumed share: 1.000  funding_ignored share: 0.000
 - Ladder level the holdout would have reached: Observer
 - RANDOM net mean: -0.001241
@@ -109,7 +109,7 @@ Step 4 verdict: **STOP as built**
 - Hit rate: 0.4222  hit_lb: 0.3784
 - Net mean at COST x2: -0.002330  x3: -0.003530
 - VALIDATE net mean: n/a  HOLDOUT net mean: -0.001130
-- Max drawdown in R: 1181.939  longest losing streak: 14
+- Max drawdown of cumulative net: 141.8327%  longest losing streak: 14
 - spread_assumed share: 1.000  funding_ignored share: 0.000
 - Ladder level the holdout would have reached: Observer
 - RANDOM net mean: -0.000641
@@ -164,7 +164,7 @@ Step 4 verdict: **STOP as built**
 - Hit rate: 0.6478  hit_lb: 0.5977
 - Net mean at COST x2: -0.002027  x3: -0.003227
 - VALIDATE net mean: n/a  HOLDOUT net mean: -0.000827
-- Max drawdown in R: 687.164  longest losing streak: 6
+- Max drawdown of cumulative net: 82.4597%  longest losing streak: 6
 - spread_assumed share: 1.000  funding_ignored share: 0.000
 - Ladder level the holdout would have reached: Learner
 - RANDOM net mean: -0.001602
@@ -220,7 +220,7 @@ Step 4 verdict: **TOO EARLY**
 - Hit rate: 0.5564  hit_lb: 0.4619
 - Net mean at COST x2: -0.002542  x3: -0.003742
 - VALIDATE net mean: n/a  HOLDOUT net mean: -0.001342
-- Max drawdown in R: 337.101  longest losing streak: 6
+- Max drawdown of cumulative net: 40.4522%  longest losing streak: 6
 - spread_assumed share: 1.000  funding_ignored share: 0.000
 - Ladder level the holdout would have reached: Observer
 - RANDOM net mean: -0.000736
@@ -268,7 +268,7 @@ Step 4 verdict: **STOP this track**
 - VALIDATE net mean: n/a. HOLDOUT net mean: -0.000808
 - Net by month: 2022-11 -0.510057, 2022-12 -0.038489, 2023-01 -0.426917, 2023-02 -0.210290, 2023-03 -0.941347, 2023-04 -0.415528, 2023-05 -0.308004, 2023-06 -0.324310, 2023-07 -0.145299, 2023-08 -0.148501, 2023-09 -0.196677, 2023-10 -0.281536, 2023-11 -0.391836, 2023-12 -0.392836, 2024-01 -0.586675, 2024-02 -0.502017, 2024-03 -1.090117, 2024-04 -0.614565, 2024-05 -0.446732, 2024-06 -0.345034, 2024-07 -0.684076, 2024-08 -0.934813, 2024-09 -0.524211, 2024-10 -0.360767
 - Flags: spread_assumed is true on every call (bookTicker archive 404); COST x2 is required
-- Baselines: ALWAYS_UP=0.3555, ALWAYS_DOWN=0.6445, PERSISTENCE=0.5541, COIN=0.5000, baseline_hit=0.6445
+- Baselines: break-even win rate=n/a, ALWAYS_UP=n/a, ALWAYS_DOWN=n/a, PERSISTENCE=n/a, COIN=n/a
 - Wins / losses / timeouts / blocked-by-cost / NOT_FILLED: 4762 / 7397 / 1235 / 781633 / 451
 - Maker fill rate, would-be winners vs losers: 0.9449 vs 0.9817
 - Same-candle: aggTrades 14, counted as loss 1
@@ -323,7 +323,7 @@ Step 4 verdict: **TOO EARLY**
 - VALIDATE net mean: -0.001091. HOLDOUT net mean: -0.000401
 - Net by month: 2026-08 0.009668, 2026-09 -0.016154, 2026-10 -0.017155
 - Flags: spread_assumed is true on every call (bookTicker archive 404); COST x2 is required
-- Baselines: ALWAYS_UP=0.4068, ALWAYS_DOWN=0.5932, PERSISTENCE=0.4746, COIN=0.5000, baseline_hit=0.5932
+- Baselines: break-even win rate=n/a, ALWAYS_UP=n/a, ALWAYS_DOWN=n/a, PERSISTENCE=n/a, COIN=n/a
 - Wins / losses / timeouts / blocked-by-cost / NOT_FILLED: 24 / 27 / 8 / 438596 / 53
 - Maker fill rate, would-be winners vs losers: 0.9470 vs 0.9778
 - Same-candle: aggTrades 2, counted as loss 1
@@ -379,6 +379,7 @@ These tracks are STOP as built. The figures are quoted from reports/backtest_202
 - The metal fee was not confirmed. Gold uses FEE_FUT_MAKER and FEE_FUT_TAKER.
 - Gold missing minutes in the loaded archive: 0. No news calendar, so blackout is false. AI and visual lenses stay excluded.
 - Gold's blocked-by-cost count is the whole 2025-12 to 2026-10 archive, because the walk is continuous. The counted calls, the net, and the verdict use only the last 20%.
+- Trend tracks have no stop. Their drawdown is the peak-to-trough of cumulative net return, recovered as the stored R path times the constant taker cost 0.0012. Scalp ALWAYS_UP and ALWAYS_DOWN in the first draft were the win/loss split. They are withdrawn. The mean gate break-even was not stored with that summary, so the scalp baseline is n/a rather than a reconstructed number.
 
 ## DECISION
 

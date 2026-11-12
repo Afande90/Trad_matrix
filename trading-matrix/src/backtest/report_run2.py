@@ -67,13 +67,35 @@ def _num(value, digits: int = 6) -> str:
     return str(value)
 
 
-def _baselines(track: dict) -> str:
+def baseline_line(track: dict) -> str:
+    """Scalp baselines are the break-even win rate. Directional baselines are for trend calls."""
     if int(track.get("counted") or 0) == 0:
         return "n/a"
+    if track.get("kind") == "scalp":
+        return (
+            f"break-even win rate={_num(track.get('breakeven_wr_mean'), 4)}, "
+            "ALWAYS_UP=n/a, ALWAYS_DOWN=n/a, PERSISTENCE=n/a, COIN=n/a"
+        )
     base = track.get("baselines") or {}
     if not base:
         return "n/a"
     return ", ".join(f"{name}={_num(base.get(name), 4)}" for name in ("ALWAYS_UP", "ALWAYS_DOWN", "PERSISTENCE", "COIN", "baseline_hit"))
+
+
+def drawdown_line(track: dict) -> str:
+    """Trend tracks have no stop, so the path is cumulative net, not R."""
+    streak = track.get("losing_streak")
+    if track.get("kind") == "scalp":
+        return f"- Max drawdown in R: {_num(track.get('max_dd_r'), 3)}  longest losing streak: {streak}"
+    if track.get("kind") == "trend" or track.get("max_dd_net") is not None:
+        dd = track.get("max_dd_net")
+        pct = None if dd is None else float(dd) * 100.0
+        return f"- Max drawdown of cumulative net: {_num(pct, 4)}%  longest losing streak: {streak}"
+    return f"- Max drawdown in R: {_num(track.get('max_dd_r'), 3)}  longest losing streak: {streak}"
+
+
+def _baselines(track: dict) -> str:
+    return baseline_line(track)
 
 
 def _net_lb(track: dict) -> str:
@@ -188,7 +210,7 @@ def render_run2(result: dict) -> str:
         lines.append(f"- Hit rate: {_num(track.get('hit_rate'), 4)}  hit_lb: {_num(track.get('hit_lb'), 4)}")
         lines.append(f"- Net mean at COST x2: {_num(track.get('net_mean_x2'))}  x3: {_num(track.get('net_mean_x3'))}")
         lines.append(f"- VALIDATE net mean: {_num(track.get('validate_net_mean'))}  HOLDOUT net mean: {_num(track.get('net_mean')) if int(track.get('counted') or 0) else 'n/a'}")
-        lines.append(f"- Max drawdown in R: {_num(track.get('max_dd_r'), 3)}  longest losing streak: {track.get('losing_streak')}")
+        lines.append(drawdown_line(track))
         lines.append(f"- spread_assumed share: {_num(track.get('spread_assumed_share'), 3)}  funding_ignored share: {_num(track.get('funding_ignored_share'), 3)}")
         lines.append(f"- Ladder level the holdout would have reached: {track.get('level')}")
         lines.append(f"- RANDOM net mean: {_num(track.get('random_net'))}")
