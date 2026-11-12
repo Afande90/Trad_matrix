@@ -1,0 +1,39 @@
+{
+  "K": 2,
+  "assumed_spread_pct": 0.0001,
+  "closed_candles_only": true,
+  "doer": "buy share of the last 3 closed 1m trades; BUYERS >= 0.60; SELLERS <= 0.40",
+  "entry": "maker limit at the setup price, trade-through by one tick within 3 candles",
+  "exception": "last closed 1m range > 3 x ATR(1m). No news calendar is bundled.",
+  "governor": "15m EMA20 > EMA50 and close > EMA50, or the mirror for DOWN",
+  "holdout_end": "2022-10-31",
+  "holdout_start": "2020-11-01",
+  "market": "USD-M perpetual",
+  "max_hold_min": 60,
+  "news_calendar": false,
+  "one_position_at_a_time": true,
+  "outcome_cost": {
+    "LOSS": "maker+taker",
+    "TIMEOUT": "maker+taker",
+    "WIN": "maker+maker"
+  },
+  "reward": "1.5 x ATR(5m)",
+  "risk": "1.0 x ATR(5m)",
+  "rule_sets_tried": 3,
+  "scalp_fee_mode": "maker",
+  "state": "maker EXTENDED cost gate and the dead-market filter",
+  "symbol": "BTCUSDT",
+  "target": "last close within 0.25 x ATR(5m) of the previous UTC day high, low, or profile POC",
+  "tick_note": "Carried from run 2. Not looked up again and not tuned.",
+  "tick_size": {
+    "BTCUSDT": "0.10"
+  },
+  "train_AGAINST_counted": 681,
+  "train_AGAINST_net_mean": -0.0008549894578322772,
+  "train_WITH_counted": 593,
+  "train_WITH_net_mean": -0.000806157276759552,
+  "train_end": "2024-10-31",
+  "train_start": "2022-11-01",
+  "variant": "WITH",
+  "z": 2.88
+}

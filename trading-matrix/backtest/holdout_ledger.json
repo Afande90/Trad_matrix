@@ -1,0 +1,33 @@
+{
+  "runs": [
+    {
+      "rules_hash": "82f04eba306488055a814360a22969d04aeea971b640cae3126f511ffcacd432",
+      "holdout_start": "2026-06-08",
+      "holdout_end": "2026-11-01",
+      "symbols": [
+        "BTCUSDT",
+        "XAUUSDT"
+      ],
+      "written_at": "2026-11-11T15:07:42.997227+00:00"
+    },
+    {
+      "rules_hash": "5e6a8e984c229ea885783cb452187e67896df0d04866ee70e8b3e17bf91f8f73",
+      "holdout_start": "2022-11-01",
+      "holdout_end": "2024-11-01",
+      "symbols": [
+        "BTCUSDT",
+        "XAUUSDT"
+      ],
+      "written_at": "2026-11-11T18:38:34.798534+00:00"
+    },
+    {
+      "rules_hash": "a3c2dbc5f9a76adc98dfb8866dfe3ace72d4cc212c953097a3d899d1adde29d9",
+      "holdout_start": "2020-11-01",
+      "holdout_end": "2022-10-31",
+      "symbols": [
+        "BTCUSDT"
+      ],
+      "written_at": "2026-11-12T02:24:46.727736+00:00"
+    }
+  ]
+}
