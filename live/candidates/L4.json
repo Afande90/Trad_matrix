@@ -1,0 +1,21 @@
+{
+  "id": "L4",
+  "name": "BTC reversion 4h",
+  "frozen": "2026-11-13",
+  "paper": true,
+  "opening_book": true,
+  "symbol": "BTCUSDT",
+  "market": "futures",
+  "direction": "follow",
+  "hold_hours": 4,
+  "rule": {
+    "kind": "t4_reversion",
+    "lookback_bars": 500,
+    "bar_minutes": 15,
+    "decision_hours": 4,
+    "rsi_period": 14,
+    "macd": [12, 26, 9],
+    "bollinger": [20, 2],
+    "note": "T4 from backtest run 2. Technical voter only: RSI 14, MACD 12/26/9, Bollinger 20/2, majority of the three. The vote is read on the last 500 closed 15-minute bars, every 4 hours. UP and DOWN only; sideways is not a call. Entry is the next 1-minute open. Exit is the open 4 hours later. One position at a time. Funding is applied."
+  }
+}

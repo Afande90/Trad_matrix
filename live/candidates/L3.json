@@ -1,0 +1,17 @@
+{
+  "id": "L3",
+  "name": "BTC quarter-hour flow",
+  "frozen": "2026-11-13",
+  "paper": true,
+  "opening_book": true,
+  "symbol": "BTCUSDT",
+  "market": "futures",
+  "direction": "follow",
+  "hold_hours": 4,
+  "rule": {
+    "kind": "quarter_hour_flow",
+    "window_ms": 10000,
+    "quarter_ms": 900000,
+    "note": "At each quarter hour, the buy share of aggTrade volume in the first 10 seconds: from the boundary up to but not including 10 seconds later. A buyer-is-maker trade is a taker sell. Buy share above one half is a buy, below one half is a sell, and exactly one half is no call. Entry is the next 1-minute open after that window. Exit is the open 4 hours later. One position at a time. Funding is applied."
+  }
+}

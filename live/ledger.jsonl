@@ -1,0 +1,5 @@
+{"type":"register","id":"L1","frozen":"2026-11-13","name":"BTC funding extreme","sha256":"4d38e5ce8b6f28c6f3a31c1205e97d288e37d08ea3a01007bb567f4073655344"}
+{"type":"register","id":"L2","frozen":"2026-11-13","name":"BTC crowding score","sha256":"1d8461b52137bf009018c2876b963162acb704fdceb4fb2e0a8946fba655d389"}
+{"type":"register","id":"L3","frozen":"2026-11-13","name":"BTC quarter-hour flow","sha256":"5013b7fcb1585913d59c67b2c8c981936076337a42181b7256cbd98b973e2151"}
+{"type":"register","id":"L4","frozen":"2026-11-13","name":"BTC reversion 4h","sha256":"d752d11e0817aaf84605d694f514f083a6c70eb7192c3ddff68dcdf1ff978952"}
+{"type":"register","id":"L5","frozen":"2026-11-13","name":"Gold below its index","sha256":"9ef4aa026b34534b1dcb4cd209ccab81ed4b83fe6eda6a6897bfaa8298a2f2af"}

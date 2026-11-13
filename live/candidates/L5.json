@@ -1,0 +1,17 @@
+{
+  "id": "L5",
+  "name": "Gold below its index",
+  "frozen": "2026-11-13",
+  "paper": true,
+  "opening_book": true,
+  "symbol": "XAUUSDT",
+  "market": "futures",
+  "direction": "UP",
+  "hold_hours": 4,
+  "rule": {
+    "kind": "index_gap_below_percentile",
+    "percentile": 0.02,
+    "lookback_days": 30,
+    "note": "The gap is the XAUUSDT perpetual close divided by its index close, minus 1. Buy when that gap is below the 2nd percentile of the previous 30 days. That day is not part of the percentile. Entry is the next 1-minute open. Exit is the open 4 hours later. One position at a time. Funding is applied."
+  }
+}
