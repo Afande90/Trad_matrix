@@ -28,6 +28,15 @@
         "BTCUSDT"
       ],
       "written_at": "2026-11-12T02:24:46.727736+00:00"
+    },
+    {
+      "rules_hash": "8ad10eceed1e9938e19dd976052c4fd2ac5054ab968981939a9a4d0409414b43",
+      "holdout_start": "2025-01-01",
+      "holdout_end": "2025-12-31",
+      "symbols": [
+        "BTCUSDT"
+      ],
+      "written_at": "2026-11-13T00:23:03.549436+00:00"
     }
   ]
 }
