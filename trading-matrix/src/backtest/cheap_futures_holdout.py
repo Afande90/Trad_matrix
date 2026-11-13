@@ -439,17 +439,29 @@ def _pct(value) -> str:
 
 def _plain(rows: list[dict], truncation_text: str) -> list[str]:
     lines = ["This is the one holdout of the frozen cheap-futures rule. Nothing was traded."]
-    lines.append("Decisions: " + ", ".join(f"{row['fee_name']} {row['verdict']}" for row in rows) + ".")
-    if any(row["verdict"] == "CONTINUE" for row in rows):
-        lines.append("CONTINUE means paper tracking only, never real money.")
-    else:
+    stopped = rows and all(row["verdict"] == "STOP as built" for row in rows)
+    gross = rows[0]["gross_mean"] if rows else None
+    fees = [row["fee"] for row in rows]
+    if stopped and gross is not None and gross > 0 and all((row["net_mean"] or 0) <= 0 for row in rows) and fees and gross < min(fees):
+        lines.append("All three fee levels are STOP as built.")
         lines.append("No fee case is cleared for paper tracking.")
-    bits = ", ".join(
-        f"{row['fee_name']} net {_num(row['net_mean'])} and {_num(row['net_mean_x2'])} after a doubled fee, {row['trades']} trades"
-        for row in rows
+        lines.append("The futures were a bit cheap, and the next four hours rose on average, but that rise was smaller than every fee.")
+    else:
+        lines.append("Decisions: " + ", ".join(f"{row['fee_name']} {row['verdict']}" for row in rows) + ".")
+        if any(row["verdict"] == "CONTINUE" for row in rows):
+            lines.append("CONTINUE means paper tracking only, never real money.")
+        else:
+            lines.append("No fee case is cleared for paper tracking.")
+        lines.append(
+            ", ".join(f"{row['fee_name']} net {_num(row['net_mean'])} on {row['trades']} trades" for row in rows) + "."
+        )
+    random_worse = all(
+        row["random_net"] is not None and row["net_mean"] is not None and row["random_net"] < row["net_mean"] for row in rows
     )
-    lines.append(bits + ".")
-    lines.append(f"Buys at random minutes are beside those numbers. Cutting the tape one day earlier was {truncation_text}.")
+    if truncation_text == "identical: yes" and random_worse:
+        lines.append("Buying the same number of times at random minutes lost more. Ending the data one day earlier changed nothing.")
+    else:
+        lines.append(f"Random buys are in the table. Cutting the tape one day earlier was {truncation_text}.")
     lines.append("Nothing from 2026 was loaded.")
     return lines[:6]
 
@@ -493,7 +505,7 @@ def render(payload: dict) -> str:
     for month in months:
         month_rows.append([month] + [_num(row["net_by_month"].get(month, 0.0)) for row in rows])
     when = datetime.now(timezone.utc).astimezone(DUBAI).strftime("%Y-%m-%d %H:%M")
-    written = payload["ledger"]["written_at"]
+    written = datetime.fromisoformat(payload["ledger"]["written_at"]).astimezone(DUBAI).strftime("%Y-%m-%d %H:%M")
     body = []
     body.extend(lines)
     body.append("")
@@ -566,7 +578,7 @@ def render(payload: dict) -> str:
     )
     body.append(
         f"Costs are above zero on every counted trade. F1 is 0.0009, F2 is 0.0006, F3 is 0.0004, each including spread 0.0001 and slippage 0.0001. "
-        f"Ledger row written {written} before any 2025 price was read. Rules hash {payload['ledger']['rules_hash'][:12]}."
+        f"Ledger row written {written} Asia/Dubai before any 2025 price was read. Rules hash {payload['ledger']['rules_hash'][:12]}."
     )
     body.append(
         "Step 4 is read from the top. CONTINUE needs at least 300 trades over 60 days, net_lb > 0, a positive average after the fee is doubled, "
