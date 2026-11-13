@@ -19,7 +19,7 @@
   },
   "reward": "1.5 x ATR(5m)",
   "risk": "1.0 x ATR(5m)",
-  "rule_sets_tried": 3,
+  "rule_sets_tried": 4,
   "scalp_fee_mode": "maker",
   "state": "maker EXTENDED cost gate and the dead-market filter",
   "symbol": "BTCUSDT",
@@ -35,5 +35,6 @@
   "train_end": "2024-10-31",
   "train_start": "2022-11-01",
   "variant": "WITH",
-  "z": 2.88
+  "z": 2.88,
+  "rule_set_4": "Fee measurement on the seen bitcoin period, limit entry, three fee schedules, plus a four-market check for 2022-2023. No variant was frozen. The holdout was not opened."
 }

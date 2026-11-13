@@ -1,0 +1,1464 @@
+{
+  "part_a": {
+    "rows": [
+      {
+        "trades": 6225,
+        "not_filled": 1190,
+        "fill_rate_winners": 0.8424420154625433,
+        "fill_rate_losers": 0.8362892223738063,
+        "gross_mean": 0.0003249588536496148,
+        "net_mean": -0.000582047059603397,
+        "net_mean_x2": -0.001482047059603397,
+        "positive_month_share": 0.2608695652173913,
+        "worst_trade": -0.07672830755749448,
+        "clears": false,
+        "fee": 0.0009000000000000001,
+        "unscored": 1,
+        "variant": "P10 1h",
+        "percentile": 10,
+        "hold": "1h",
+        "fee_name": "F1",
+        "fee_note": "limit 0.0002, market 0.0005, spread 0.0001, slippage 0.0001"
+      },
+      {
+        "trades": 6225,
+        "not_filled": 1190,
+        "fill_rate_winners": 0.8424420154625433,
+        "fill_rate_losers": 0.8362892223738063,
+        "gross_mean": 0.0003249588536496148,
+        "net_mean": -0.0002820470596033968,
+        "net_mean_x2": -0.0008820470596033968,
+        "positive_month_share": 0.391304347826087,
+        "worst_trade": -0.07642830755749448,
+        "clears": false,
+        "fee": 0.0006000000000000001,
+        "unscored": 1,
+        "variant": "P10 1h",
+        "percentile": 10,
+        "hold": "1h",
+        "fee_name": "F2",
+        "fee_note": "limit 0, market 0.0004, spread 0.0001, slippage 0.0001"
+      },
+      {
+        "trades": 6225,
+        "not_filled": 1190,
+        "fill_rate_winners": 0.8424420154625433,
+        "fill_rate_losers": 0.8362892223738063,
+        "gross_mean": 0.0003249588536496148,
+        "net_mean": -8.204705960339691e-05,
+        "net_mean_x2": -0.00048204705960339697,
+        "positive_month_share": 0.5217391304347826,
+        "worst_trade": -0.07622830755749448,
+        "clears": false,
+        "fee": 0.0004,
+        "unscored": 1,
+        "variant": "P10 1h",
+        "percentile": 10,
+        "hold": "1h",
+        "fee_name": "F3",
+        "fee_note": "limit 0, market 0.0002, spread 0.0001, slippage 0.0001"
+      },
+      {
+        "trades": 2193,
+        "not_filled": 918,
+        "fill_rate_winners": 0.7187700192184497,
+        "fill_rate_losers": 0.6909677419354838,
+        "gross_mean": 0.00041940712725165784,
+        "net_mean": -0.0005175267897570042,
+        "net_mean_x2": -0.0014175267897570043,
+        "positive_month_share": 0.43478260869565216,
+        "worst_trade": -0.1280302167566134,
+        "clears": false,
+        "fee": 0.0009000000000000001,
+        "unscored": 1,
+        "variant": "P10 4h",
+        "percentile": 10,
+        "hold": "4h",
+        "fee_name": "F1",
+        "fee_note": "limit 0.0002, market 0.0005, spread 0.0001, slippage 0.0001"
+      },
+      {
+        "trades": 2193,
+        "not_filled": 918,
+        "fill_rate_winners": 0.7187700192184497,
+        "fill_rate_losers": 0.6909677419354838,
+        "gross_mean": 0.00041940712725165784,
+        "net_mean": -0.00021752678975700426,
+        "net_mean_x2": -0.000817526789757004,
+        "positive_month_share": 0.43478260869565216,
+        "worst_trade": -0.1277302167566134,
+        "clears": false,
+        "fee": 0.0006000000000000001,
+        "unscored": 1,
+        "variant": "P10 4h",
+        "percentile": 10,
+        "hold": "4h",
+        "fee_name": "F2",
+        "fee_note": "limit 0, market 0.0004, spread 0.0001, slippage 0.0001"
+      },
+      {
+        "trades": 2193,
+        "not_filled": 918,
+        "fill_rate_winners": 0.7187700192184497,
+        "fill_rate_losers": 0.6909677419354838,
+        "gross_mean": 0.00041940712725165784,
+        "net_mean": -1.75267897570041e-05,
+        "net_mean_x2": -0.00041752678975700414,
+        "positive_month_share": 0.43478260869565216,
+        "worst_trade": -0.1275302167566134,
+        "clears": false,
+        "fee": 0.0004,
+        "unscored": 1,
+        "variant": "P10 4h",
+        "percentile": 10,
+        "hold": "4h",
+        "fee_name": "F3",
+        "fee_note": "limit 0, market 0.0002, spread 0.0001, slippage 0.0001"
+      },
+      {
+        "trades": 4368,
+        "not_filled": 747,
+        "fill_rate_winners": 0.8603846153846154,
+        "fill_rate_losers": 0.8473161033797216,
+        "gross_mean": 0.0005479490828950974,
+        "net_mean": -0.0003577197243393345,
+        "net_mean_x2": -0.0012577197243393346,
+        "positive_month_share": 0.43478260869565216,
+        "worst_trade": -0.10440093307598818,
+        "clears": false,
+        "fee": 0.0009000000000000001,
+        "unscored": 1,
+        "variant": "P5 1h",
+        "percentile": 5,
+        "hold": "1h",
+        "fee_name": "F1",
+        "fee_note": "limit 0.0002, market 0.0005, spread 0.0001, slippage 0.0001"
+      },
+      {
+        "trades": 4368,
+        "not_filled": 747,
+        "fill_rate_winners": 0.8603846153846154,
+        "fill_rate_losers": 0.8473161033797216,
+        "gross_mean": 0.0005479490828950974,
+        "net_mean": -5.771972433933435e-05,
+        "net_mean_x2": -0.0006577197243393342,
+        "positive_month_share": 0.5217391304347826,
+        "worst_trade": -0.10410093307598818,
+        "clears": false,
+        "fee": 0.0006000000000000001,
+        "unscored": 1,
+        "variant": "P5 1h",
+        "percentile": 5,
+        "hold": "1h",
+        "fee_name": "F2",
+        "fee_note": "limit 0, market 0.0004, spread 0.0001, slippage 0.0001"
+      },
+      {
+        "trades": 4368,
+        "not_filled": 747,
+        "fill_rate_winners": 0.8603846153846154,
+        "fill_rate_losers": 0.8473161033797216,
+        "gross_mean": 0.0005479490828950974,
+        "net_mean": 0.0001422802756606656,
+        "net_mean_x2": -0.00025771972433933445,
+        "positive_month_share": 0.5652173913043478,
+        "worst_trade": -0.10390093307598817,
+        "clears": false,
+        "fee": 0.0004,
+        "unscored": 1,
+        "variant": "P5 1h",
+        "percentile": 5,
+        "hold": "1h",
+        "fee_name": "F3",
+        "fee_note": "limit 0, market 0.0002, spread 0.0001, slippage 0.0001"
+      },
+      {
+        "trades": 1738,
+        "not_filled": 563,
+        "fill_rate_winners": 0.772020725388601,
+        "fill_rate_losers": 0.7384076990376203,
+        "gross_mean": 0.0010032077283699567,
+        "net_mean": 7.289557071748423e-05,
+        "net_mean_x2": -0.0008271044292825158,
+        "positive_month_share": 0.4782608695652174,
+        "worst_trade": -0.10879391589933261,
+        "clears": false,
+        "fee": 0.0009000000000000001,
+        "unscored": 1,
+        "variant": "P5 4h",
+        "percentile": 5,
+        "hold": "4h",
+        "fee_name": "F1",
+        "fee_note": "limit 0.0002, market 0.0005, spread 0.0001, slippage 0.0001"
+      },
+      {
+        "trades": 1738,
+        "not_filled": 563,
+        "fill_rate_winners": 0.772020725388601,
+        "fill_rate_losers": 0.7384076990376203,
+        "gross_mean": 0.0010032077283699567,
+        "net_mean": 0.0003728955707174842,
+        "net_mean_x2": -0.0002271044292825156,
+        "positive_month_share": 0.5652173913043478,
+        "worst_trade": -0.10849391589933262,
+        "clears": false,
+        "fee": 0.0006000000000000001,
+        "unscored": 1,
+        "variant": "P5 4h",
+        "percentile": 5,
+        "hold": "4h",
+        "fee_name": "F2",
+        "fee_note": "limit 0, market 0.0004, spread 0.0001, slippage 0.0001"
+      },
+      {
+        "trades": 1738,
+        "not_filled": 563,
+        "fill_rate_winners": 0.772020725388601,
+        "fill_rate_losers": 0.7384076990376203,
+        "gross_mean": 0.0010032077283699567,
+        "net_mean": 0.0005728955707174844,
+        "net_mean_x2": 0.00017289557071748432,
+        "positive_month_share": 0.6521739130434783,
+        "worst_trade": -0.10829391589933261,
+        "clears": true,
+        "fee": 0.0004,
+        "unscored": 1,
+        "variant": "P5 4h",
+        "percentile": 5,
+        "hold": "4h",
+        "fee_name": "F3",
+        "fee_note": "limit 0, market 0.0002, spread 0.0001, slippage 0.0001"
+      },
+      {
+        "trades": 2640,
+        "not_filled": 405,
+        "fill_rate_winners": 0.8686739269698911,
+        "fill_rate_losers": 0.8652291105121294,
+        "gross_mean": 0.0009297149852705595,
+        "net_mean": 2.5907068603893157e-05,
+        "net_mean_x2": -0.000874092931396107,
+        "positive_month_share": 0.5652173913043478,
+        "worst_trade": -0.07672830755749448,
+        "clears": false,
+        "fee": 0.0009000000000000001,
+        "unscored": 1,
+        "variant": "P2 1h",
+        "percentile": 2,
+        "hold": "1h",
+        "fee_name": "F1",
+        "fee_note": "limit 0.0002, market 0.0005, spread 0.0001, slippage 0.0001"
+      },
+      {
+        "trades": 2640,
+        "not_filled": 405,
+        "fill_rate_winners": 0.8686739269698911,
+        "fill_rate_losers": 0.8652291105121294,
+        "gross_mean": 0.0009297149852705595,
+        "net_mean": 0.00032590706860389325,
+        "net_mean_x2": -0.0002740929313961067,
+        "positive_month_share": 0.6521739130434783,
+        "worst_trade": -0.07642830755749448,
+        "clears": false,
+        "fee": 0.0006000000000000001,
+        "unscored": 1,
+        "variant": "P2 1h",
+        "percentile": 2,
+        "hold": "1h",
+        "fee_name": "F2",
+        "fee_note": "limit 0, market 0.0004, spread 0.0001, slippage 0.0001"
+      },
+      {
+        "trades": 2640,
+        "not_filled": 405,
+        "fill_rate_winners": 0.8686739269698911,
+        "fill_rate_losers": 0.8652291105121294,
+        "gross_mean": 0.0009297149852705595,
+        "net_mean": 0.0005259070686038932,
+        "net_mean_x2": 0.00012590706860389315,
+        "positive_month_share": 0.6956521739130435,
+        "worst_trade": -0.07622830755749448,
+        "clears": true,
+        "fee": 0.0004,
+        "unscored": 1,
+        "variant": "P2 1h",
+        "percentile": 2,
+        "hold": "1h",
+        "fee_name": "F3",
+        "fee_note": "limit 0, market 0.0002, spread 0.0001, slippage 0.0001"
+      },
+      {
+        "trades": 1189,
+        "not_filled": 300,
+        "fill_rate_winners": 0.8197831978319783,
+        "fill_rate_losers": 0.7776298268974701,
+        "gross_mean": 0.0012475744842138769,
+        "net_mean": 0.00032145074998343276,
+        "net_mean_x2": -0.0005785492500165673,
+        "positive_month_share": 0.5652173913043478,
+        "worst_trade": -0.09809306045961112,
+        "clears": false,
+        "fee": 0.0009000000000000001,
+        "unscored": 1,
+        "variant": "P2 4h",
+        "percentile": 2,
+        "hold": "4h",
+        "fee_name": "F1",
+        "fee_note": "limit 0.0002, market 0.0005, spread 0.0001, slippage 0.0001"
+      },
+      {
+        "trades": 1189,
+        "not_filled": 300,
+        "fill_rate_winners": 0.8197831978319783,
+        "fill_rate_losers": 0.7776298268974701,
+        "gross_mean": 0.0012475744842138769,
+        "net_mean": 0.0006214507499834327,
+        "net_mean_x2": 2.1450749983432975e-05,
+        "positive_month_share": 0.6086956521739131,
+        "worst_trade": -0.09779306045961113,
+        "clears": true,
+        "fee": 0.0006000000000000001,
+        "unscored": 1,
+        "variant": "P2 4h",
+        "percentile": 2,
+        "hold": "4h",
+        "fee_name": "F2",
+        "fee_note": "limit 0, market 0.0004, spread 0.0001, slippage 0.0001"
+      },
+      {
+        "trades": 1189,
+        "not_filled": 300,
+        "fill_rate_winners": 0.8197831978319783,
+        "fill_rate_losers": 0.7776298268974701,
+        "gross_mean": 0.0012475744842138769,
+        "net_mean": 0.0008214507499834329,
+        "net_mean_x2": 0.0004214507499834328,
+        "positive_month_share": 0.6086956521739131,
+        "worst_trade": -0.09759306045961112,
+        "clears": true,
+        "fee": 0.0004,
+        "unscored": 1,
+        "variant": "P2 4h",
+        "percentile": 2,
+        "hold": "4h",
+        "fee_name": "F3",
+        "fee_note": "limit 0, market 0.0002, spread 0.0001, slippage 0.0001"
+      }
+    ],
+    "random": [
+      {
+        "variant": "P10 1h",
+        "requested": 6225,
+        "placed": 6225,
+        "seed": 3558,
+        "short": {},
+        "fees": {
+          "F1": {
+            "trades": 6225,
+            "net_mean": -0.0009151236016973252,
+            "gross_mean": 1.585818382995573e-06
+          },
+          "F2": {
+            "trades": 6225,
+            "net_mean": -0.0006151236016973251,
+            "gross_mean": 1.585818382995573e-06
+          },
+          "F3": {
+            "trades": 6225,
+            "net_mean": -0.00041512360169732515,
+            "gross_mean": 1.585818382995573e-06
+          }
+        }
+      },
+      {
+        "variant": "P10 4h",
+        "requested": 2193,
+        "placed": 2171,
+        "seed": 3565,
+        "short": {
+          "2022-06": {
+            "needed": 144,
+            "placed": 136
+          },
+          "2022-08": {
+            "needed": 144,
+            "placed": 130
+          }
+        },
+        "fees": {
+          "F1": {
+            "trades": 2171,
+            "net_mean": -0.0008395819692874916,
+            "gross_mean": 0.00012385117672816776
+          },
+          "F2": {
+            "trades": 2171,
+            "net_mean": -0.0005395819692874914,
+            "gross_mean": 0.00012385117672816776
+          },
+          "F3": {
+            "trades": 2171,
+            "net_mean": -0.00033958196928749135,
+            "gross_mean": 0.00012385117672816776
+          }
+        }
+      },
+      {
+        "variant": "P5 1h",
+        "requested": 4368,
+        "placed": 4368,
+        "seed": 3558,
+        "short": {},
+        "fees": {
+          "F1": {
+            "trades": 4368,
+            "net_mean": -0.0009325463701065225,
+            "gross_mean": -1.4798801425204394e-05
+          },
+          "F2": {
+            "trades": 4368,
+            "net_mean": -0.0006325463701065224,
+            "gross_mean": -1.4798801425204394e-05
+          },
+          "F3": {
+            "trades": 4368,
+            "net_mean": -0.0004325463701065225,
+            "gross_mean": -1.4798801425204394e-05
+          }
+        }
+      },
+      {
+        "variant": "P5 4h",
+        "requested": 1738,
+        "placed": 1738,
+        "seed": 3565,
+        "short": {},
+        "fees": {
+          "F1": {
+            "trades": 1738,
+            "net_mean": -0.0006300681804960504,
+            "gross_mean": 0.000335605312024086
+          },
+          "F2": {
+            "trades": 1738,
+            "net_mean": -0.00033006818049605033,
+            "gross_mean": 0.000335605312024086
+          },
+          "F3": {
+            "trades": 1738,
+            "net_mean": -0.0001300681804960502,
+            "gross_mean": 0.000335605312024086
+          }
+        }
+      },
+      {
+        "variant": "P2 1h",
+        "requested": 2640,
+        "placed": 2640,
+        "seed": 3558,
+        "short": {},
+        "fees": {
+          "F1": {
+            "trades": 2640,
+            "net_mean": -0.0009132607146472632,
+            "gross_mean": 6.5558383830392625e-06
+          },
+          "F2": {
+            "trades": 2640,
+            "net_mean": -0.000613260714647263,
+            "gross_mean": 6.5558383830392625e-06
+          },
+          "F3": {
+            "trades": 2640,
+            "net_mean": -0.0004132607146472631,
+            "gross_mean": 6.5558383830392625e-06
+          }
+        }
+      },
+      {
+        "variant": "P2 4h",
+        "requested": 1189,
+        "placed": 1189,
+        "seed": 3558,
+        "short": {},
+        "fees": {
+          "F1": {
+            "trades": 1189,
+            "net_mean": -0.0010422617772371783,
+            "gross_mean": -7.848906066863517e-05
+          },
+          "F2": {
+            "trades": 1189,
+            "net_mean": -0.0007422617772371784,
+            "gross_mean": -7.848906066863517e-05
+          },
+          "F3": {
+            "trades": 1189,
+            "net_mean": -0.0005422617772371781,
+            "gross_mean": -7.848906066863517e-05
+          }
+        }
+      }
+    ],
+    "truncation": {
+      "identical": true,
+      "text": "identical: yes",
+      "signal_mismatches": 0,
+      "fill_mismatches": 0,
+      "safe_minutes": 41758,
+      "cut": "2022-10-30",
+      "compared_with": "2022-10-31"
+    },
+    "months": [
+      "2020-12",
+      "2021-01",
+      "2021-02",
+      "2021-03",
+      "2021-04",
+      "2021-05",
+      "2021-06",
+      "2021-07",
+      "2021-08",
+      "2021-09",
+      "2021-10",
+      "2021-11",
+      "2021-12",
+      "2022-01",
+      "2022-02",
+      "2022-03",
+      "2022-04",
+      "2022-05",
+      "2022-06",
+      "2022-07",
+      "2022-08",
+      "2022-09",
+      "2022-10"
+    ],
+    "missing_futures_months": [],
+    "missing_spot_months": [],
+    "missing_funding_months": [],
+    "fees": {
+      "F1": {
+        "rate": 0.0009000000000000001,
+        "note": "limit 0.0002, market 0.0005, spread 0.0001, slippage 0.0001"
+      },
+      "F2": {
+        "rate": 0.0006000000000000001,
+        "note": "limit 0, market 0.0004, spread 0.0001, slippage 0.0001"
+      },
+      "F3": {
+        "rate": 0.0004,
+        "note": "limit 0, market 0.0002, spread 0.0001, slippage 0.0001"
+      }
+    }
+  },
+  "part_b": [
+    {
+      "instrument": "Gold",
+      "measure": "5m, follow the last bar, held one bar",
+      "n": 141203,
+      "gross_effect": -4.49579641233277e-06,
+      "cost": 0.00026099140022500377,
+      "effect_over_cost": -0.017225841190387465,
+      "t_stat": -3.0908843078923085,
+      "label": "real but smaller than the cost",
+      "kind": "return"
+    },
+    {
+      "instrument": "Gold",
+      "measure": "5m, fade the last bar, held one bar",
+      "n": 141203,
+      "gross_effect": 4.49579641233277e-06,
+      "cost": 0.00026099140022500377,
+      "effect_over_cost": 0.017225841190387465,
+      "t_stat": 3.0908843078923085,
+      "label": "real but smaller than the cost",
+      "kind": "return"
+    },
+    {
+      "instrument": "Gold",
+      "measure": "15m, follow the last bar, held one bar",
+      "n": 47037,
+      "gross_effect": -2.1056701244528175e-06,
+      "cost": 0.00026099140022500377,
+      "effect_over_cost": -0.008067967460374153,
+      "t_stat": -0.49508316930659896,
+      "label": "nothing",
+      "kind": "return"
+    },
+    {
+      "instrument": "Gold",
+      "measure": "15m, fade the last bar, held one bar",
+      "n": 47037,
+      "gross_effect": 2.1056701244528175e-06,
+      "cost": 0.00026099140022500377,
+      "effect_over_cost": 0.008067967460374153,
+      "t_stat": 0.49508316930659896,
+      "label": "nothing",
+      "kind": "return"
+    },
+    {
+      "instrument": "Gold",
+      "measure": "15m correlation of the size of one move with the size of the next 0.2665",
+      "n": 47037,
+      "gross_effect": null,
+      "cost": null,
+      "effect_over_cost": null,
+      "t_stat": 20.08603013034405,
+      "label": "not an up-or-down trade",
+      "kind": "correlation"
+    },
+    {
+      "instrument": "Gold",
+      "measure": "after a top-10% 15m move, follow it, next 1h",
+      "n": 5672,
+      "gross_effect": -9.354535795932352e-07,
+      "cost": 0.00026099140022500377,
+      "effect_over_cost": -0.003584231429797187,
+      "t_stat": -0.024721721820920153,
+      "label": "nothing",
+      "kind": "return"
+    },
+    {
+      "instrument": "Gold",
+      "measure": "after a top-10% 15m move, fade it, next 1h",
+      "n": 5672,
+      "gross_effect": 9.354535795932352e-07,
+      "cost": 0.00026099140022500377,
+      "effect_over_cost": 0.003584231429797187,
+      "t_stat": 0.024721721820920153,
+      "label": "nothing",
+      "kind": "return"
+    },
+    {
+      "instrument": "Gold",
+      "measure": "60m, follow the last bar, held one bar",
+      "n": 11683,
+      "gross_effect": 2.2523287557322625e-07,
+      "cost": 0.00026099140022500377,
+      "effect_over_cost": 0.0008629896440229461,
+      "t_stat": 0.014192811406415224,
+      "label": "nothing",
+      "kind": "return"
+    },
+    {
+      "instrument": "Gold",
+      "measure": "60m, fade the last bar, held one bar",
+      "n": 11683,
+      "gross_effect": -2.2523287557322625e-07,
+      "cost": 0.00026099140022500377,
+      "effect_over_cost": -0.0008629896440229461,
+      "t_stat": -0.014192811406415224,
+      "label": "nothing",
+      "kind": "return"
+    },
+    {
+      "instrument": "Gold",
+      "measure": "60m correlation of the size of one move with the size of the next 0.2523",
+      "n": 11683,
+      "gross_effect": null,
+      "cost": null,
+      "effect_over_cost": null,
+      "t_stat": 13.65722276339404,
+      "label": "not an up-or-down trade",
+      "kind": "correlation"
+    },
+    {
+      "instrument": "Gold",
+      "measure": "follow the first 15m after 07:00 UTC, next 4h",
+      "n": 514,
+      "gross_effect": 0.00015771129268783298,
+      "cost": 0.00026099140022500377,
+      "effect_over_cost": 0.604277736936421,
+      "t_stat": 1.0938027199830207,
+      "label": "nothing",
+      "kind": "return"
+    },
+    {
+      "instrument": "Gold",
+      "measure": "follow the first 15m after 13:30 UTC, next 4h",
+      "n": 513,
+      "gross_effect": -0.00017526275669788472,
+      "cost": 0.00026099140022500377,
+      "effect_over_cost": -0.6715269412968727,
+      "t_stat": -0.7660583312264628,
+      "label": "nothing",
+      "kind": "return"
+    },
+    {
+      "instrument": "Silver",
+      "measure": "5m, follow the last bar, held one bar",
+      "n": 136198,
+      "gross_effect": -1.0252522721685006e-05,
+      "cost": 0.0013921100877000193,
+      "effect_over_cost": -0.007364735599771247,
+      "t_stat": -3.3872707545890437,
+      "label": "real but smaller than the cost",
+      "kind": "return"
+    },
+    {
+      "instrument": "Silver",
+      "measure": "5m, fade the last bar, held one bar",
+      "n": 136198,
+      "gross_effect": 1.0252522721685006e-05,
+      "cost": 0.0013921100877000193,
+      "effect_over_cost": 0.007364735599771247,
+      "t_stat": 3.3872707545890437,
+      "label": "real but smaller than the cost",
+      "kind": "return"
+    },
+    {
+      "instrument": "Silver",
+      "measure": "15m, follow the last bar, held one bar",
+      "n": 46145,
+      "gross_effect": -1.56253352782772e-05,
+      "cost": 0.0013921100877000193,
+      "effect_over_cost": -0.0112242095049341,
+      "t_stat": -1.7601359184763739,
+      "label": "nothing",
+      "kind": "return"
+    },
+    {
+      "instrument": "Silver",
+      "measure": "15m, fade the last bar, held one bar",
+      "n": 46145,
+      "gross_effect": 1.56253352782772e-05,
+      "cost": 0.0013921100877000193,
+      "effect_over_cost": 0.0112242095049341,
+      "t_stat": 1.7601359184763739,
+      "label": "nothing",
+      "kind": "return"
+    },
+    {
+      "instrument": "Silver",
+      "measure": "15m correlation of the size of one move with the size of the next 0.2631",
+      "n": 46145,
+      "gross_effect": null,
+      "cost": null,
+      "effect_over_cost": null,
+      "t_stat": 20.60661781835203,
+      "label": "not an up-or-down trade",
+      "kind": "correlation"
+    },
+    {
+      "instrument": "Silver",
+      "measure": "after a top-10% 15m move, follow it, next 1h",
+      "n": 5573,
+      "gross_effect": 2.1636249405672727e-05,
+      "cost": 0.0013921100877000193,
+      "effect_over_cost": 0.015542053460311568,
+      "t_stat": 0.2738599987244128,
+      "label": "nothing",
+      "kind": "return"
+    },
+    {
+      "instrument": "Silver",
+      "measure": "after a top-10% 15m move, fade it, next 1h",
+      "n": 5573,
+      "gross_effect": -2.1636249405672727e-05,
+      "cost": 0.0013921100877000193,
+      "effect_over_cost": -0.015542053460311568,
+      "t_stat": -0.2738599987244128,
+      "label": "nothing",
+      "kind": "return"
+    },
+    {
+      "instrument": "Silver",
+      "measure": "60m, follow the last bar, held one bar",
+      "n": 11574,
+      "gross_effect": -4.4362015890574866e-05,
+      "cost": 0.0013921100877000193,
+      "effect_over_cost": -0.031866744076158346,
+      "t_stat": -1.3135694759502619,
+      "label": "nothing",
+      "kind": "return"
+    },
+    {
+      "instrument": "Silver",
+      "measure": "60m, fade the last bar, held one bar",
+      "n": 11574,
+      "gross_effect": 4.4362015890574866e-05,
+      "cost": 0.0013921100877000193,
+      "effect_over_cost": 0.031866744076158346,
+      "t_stat": 1.3135694759502619,
+      "label": "nothing",
+      "kind": "return"
+    },
+    {
+      "instrument": "Silver",
+      "measure": "60m correlation of the size of one move with the size of the next 0.2254",
+      "n": 11574,
+      "gross_effect": null,
+      "cost": null,
+      "effect_over_cost": null,
+      "t_stat": 12.552957974990008,
+      "label": "not an up-or-down trade",
+      "kind": "correlation"
+    },
+    {
+      "instrument": "Silver",
+      "measure": "follow the first 15m after 07:00 UTC, next 4h",
+      "n": 510,
+      "gross_effect": 0.0005087117028827353,
+      "cost": 0.0013921100877000193,
+      "effect_over_cost": 0.3654249095509433,
+      "t_stat": 1.7766540662639683,
+      "label": "nothing",
+      "kind": "return"
+    },
+    {
+      "instrument": "Silver",
+      "measure": "follow the first 15m after 13:30 UTC, next 4h",
+      "n": 512,
+      "gross_effect": 0.00011858254064947386,
+      "cost": 0.0013921100877000193,
+      "effect_over_cost": 0.08518187009576988,
+      "t_stat": 0.25856504881830417,
+      "label": "nothing",
+      "kind": "return"
+    },
+    {
+      "instrument": "Light crude",
+      "measure": "5m, follow the last bar, held one bar",
+      "n": 137720,
+      "gross_effect": -1.5955749634262544e-05,
+      "cost": 0.000680970587875865,
+      "effect_over_cost": -0.023430893959800712,
+      "t_stat": -3.822654171189344,
+      "label": "real but smaller than the cost",
+      "kind": "return"
+    },
+    {
+      "instrument": "Light crude",
+      "measure": "5m, fade the last bar, held one bar",
+      "n": 137720,
+      "gross_effect": 1.5955749634262544e-05,
+      "cost": 0.000680970587875865,
+      "effect_over_cost": 0.023430893959800712,
+      "t_stat": 3.822654171189344,
+      "label": "real but smaller than the cost",
+      "kind": "return"
+    },
+    {
+      "instrument": "Light crude",
+      "measure": "15m, follow the last bar, held one bar",
+      "n": 46412,
+      "gross_effect": -9.978532817200877e-06,
+      "cost": 0.000680970587875865,
+      "effect_over_cost": -0.0146533976574916,
+      "t_stat": -0.822666652584824,
+      "label": "nothing",
+      "kind": "return"
+    },
+    {
+      "instrument": "Light crude",
+      "measure": "15m, fade the last bar, held one bar",
+      "n": 46412,
+      "gross_effect": 9.978532817200877e-06,
+      "cost": 0.000680970587875865,
+      "effect_over_cost": 0.0146533976574916,
+      "t_stat": 0.822666652584824,
+      "label": "nothing",
+      "kind": "return"
+    },
+    {
+      "instrument": "Light crude",
+      "measure": "15m correlation of the size of one move with the size of the next 0.2884",
+      "n": 46412,
+      "gross_effect": null,
+      "cost": null,
+      "effect_over_cost": null,
+      "t_stat": 22.406290402769642,
+      "label": "not an up-or-down trade",
+      "kind": "correlation"
+    },
+    {
+      "instrument": "Light crude",
+      "measure": "after a top-10% 15m move, follow it, next 1h",
+      "n": 5706,
+      "gross_effect": 0.00013431172118116526,
+      "cost": 0.000680970587875865,
+      "effect_over_cost": 0.19723571556903882,
+      "t_stat": 1.2420997604269302,
+      "label": "nothing",
+      "kind": "return"
+    },
+    {
+      "instrument": "Light crude",
+      "measure": "after a top-10% 15m move, fade it, next 1h",
+      "n": 5706,
+      "gross_effect": -0.00013431172118116526,
+      "cost": 0.000680970587875865,
+      "effect_over_cost": -0.19723571556903882,
+      "t_stat": -1.2420997604269302,
+      "label": "nothing",
+      "kind": "return"
+    },
+    {
+      "instrument": "Light crude",
+      "measure": "60m, follow the last bar, held one bar",
+      "n": 11593,
+      "gross_effect": 3.4750892286911923e-06,
+      "cost": 0.000680970587875865,
+      "effect_over_cost": 0.005103141443349196,
+      "t_stat": 0.06557256731840651,
+      "label": "nothing",
+      "kind": "return"
+    },
+    {
+      "instrument": "Light crude",
+      "measure": "60m, fade the last bar, held one bar",
+      "n": 11593,
+      "gross_effect": -3.4750892286911923e-06,
+      "cost": 0.000680970587875865,
+      "effect_over_cost": -0.005103141443349196,
+      "t_stat": -0.06557256731840651,
+      "label": "nothing",
+      "kind": "return"
+    },
+    {
+      "instrument": "Light crude",
+      "measure": "60m correlation of the size of one move with the size of the next 0.2744",
+      "n": 11593,
+      "gross_effect": null,
+      "cost": null,
+      "effect_over_cost": null,
+      "t_stat": 14.974481516819916,
+      "label": "not an up-or-down trade",
+      "kind": "correlation"
+    },
+    {
+      "instrument": "Light crude",
+      "measure": "follow the first 15m after 07:00 UTC, next 4h",
+      "n": 512,
+      "gross_effect": 0.0001283383003461817,
+      "cost": 0.000680970587875865,
+      "effect_over_cost": 0.18846379363682103,
+      "t_stat": 0.2617607060091842,
+      "label": "nothing",
+      "kind": "return"
+    },
+    {
+      "instrument": "Light crude",
+      "measure": "follow the first 15m after 13:30 UTC, next 4h",
+      "n": 512,
+      "gross_effect": -0.0002297301898264725,
+      "cost": 0.000680970587875865,
+      "effect_over_cost": -0.3373569929694971,
+      "t_stat": -0.3336598201581766,
+      "label": "nothing",
+      "kind": "return"
+    },
+    {
+      "instrument": "EURUSD",
+      "measure": "5m, follow the last bar, held one bar",
+      "n": 147614,
+      "gross_effect": -3.19036132421458e-06,
+      "cost": 0.00010788345156130962,
+      "effect_over_cost": -0.0295722956398138,
+      "t_stat": -3.63385149202025,
+      "label": "real but smaller than the cost",
+      "kind": "return"
+    },
+    {
+      "instrument": "EURUSD",
+      "measure": "5m, fade the last bar, held one bar",
+      "n": 147614,
+      "gross_effect": 3.19036132421458e-06,
+      "cost": 0.00010788345156130962,
+      "effect_over_cost": 0.0295722956398138,
+      "t_stat": 3.63385149202025,
+      "label": "real but smaller than the cost",
+      "kind": "return"
+    },
+    {
+      "instrument": "EURUSD",
+      "measure": "15m, follow the last bar, held one bar",
+      "n": 49463,
+      "gross_effect": -1.0661421744064583e-05,
+      "cost": 0.00010788345156130962,
+      "effect_over_cost": -0.0988235136137237,
+      "t_stat": -3.9966618097546793,
+      "label": "real but smaller than the cost",
+      "kind": "return"
+    },
+    {
+      "instrument": "EURUSD",
+      "measure": "15m, fade the last bar, held one bar",
+      "n": 49463,
+      "gross_effect": 1.0661421744064583e-05,
+      "cost": 0.00010788345156130962,
+      "effect_over_cost": 0.0988235136137237,
+      "t_stat": 3.9966618097546793,
+      "label": "real but smaller than the cost",
+      "kind": "return"
+    },
+    {
+      "instrument": "EURUSD",
+      "measure": "15m correlation of the size of one move with the size of the next 0.2637",
+      "n": 49463,
+      "gross_effect": null,
+      "cost": null,
+      "effect_over_cost": null,
+      "t_stat": 20.26396916376198,
+      "label": "not an up-or-down trade",
+      "kind": "correlation"
+    },
+    {
+      "instrument": "EURUSD",
+      "measure": "after a top-10% 15m move, follow it, next 1h",
+      "n": 5702,
+      "gross_effect": -3.6141615123204954e-05,
+      "cost": 0.00010788345156130962,
+      "effect_over_cost": -0.335006107054944,
+      "t_stat": -1.7455691151846233,
+      "label": "nothing",
+      "kind": "return"
+    },
+    {
+      "instrument": "EURUSD",
+      "measure": "after a top-10% 15m move, fade it, next 1h",
+      "n": 5702,
+      "gross_effect": 3.6141615123204954e-05,
+      "cost": 0.00010788345156130962,
+      "effect_over_cost": 0.335006107054944,
+      "t_stat": 1.7455691151846233,
+      "label": "nothing",
+      "kind": "return"
+    },
+    {
+      "instrument": "EURUSD",
+      "measure": "60m, follow the last bar, held one bar",
+      "n": 12316,
+      "gross_effect": -1.878534718450636e-05,
+      "cost": 0.00010788345156130962,
+      "effect_over_cost": -0.17412630864735304,
+      "t_stat": -1.6997971226645965,
+      "label": "nothing",
+      "kind": "return"
+    },
+    {
+      "instrument": "EURUSD",
+      "measure": "60m, fade the last bar, held one bar",
+      "n": 12316,
+      "gross_effect": 1.878534718450636e-05,
+      "cost": 0.00010788345156130962,
+      "effect_over_cost": 0.17412630864735304,
+      "t_stat": 1.6997971226645965,
+      "label": "nothing",
+      "kind": "return"
+    },
+    {
+      "instrument": "EURUSD",
+      "measure": "60m correlation of the size of one move with the size of the next 0.2444",
+      "n": 12316,
+      "gross_effect": null,
+      "cost": null,
+      "effect_over_cost": null,
+      "t_stat": 15.82394261041062,
+      "label": "not an up-or-down trade",
+      "kind": "correlation"
+    },
+    {
+      "instrument": "EURUSD",
+      "measure": "follow the first 15m after 07:00 UTC, next 4h",
+      "n": 520,
+      "gross_effect": 2.538090736402671e-05,
+      "cost": 0.00010788345156130962,
+      "effect_over_cost": 0.2352622853339362,
+      "t_stat": 0.21577435110671467,
+      "label": "nothing",
+      "kind": "return"
+    },
+    {
+      "instrument": "EURUSD",
+      "measure": "follow the first 15m after 13:30 UTC, next 4h",
+      "n": 518,
+      "gross_effect": 1.0468817921982466e-05,
+      "cost": 0.00010788345156130962,
+      "effect_over_cost": 0.09703821828534184,
+      "t_stat": 0.0776292677187902,
+      "label": "nothing",
+      "kind": "return"
+    },
+    {
+      "instrument": "GBPUSD",
+      "measure": "5m, follow the last bar, held one bar",
+      "n": 147951,
+      "gross_effect": -3.8596215483815825e-06,
+      "cost": 0.0001588423737745599,
+      "effect_over_cost": -0.02429843785802033,
+      "t_stat": -3.7153727906535656,
+      "label": "real but smaller than the cost",
+      "kind": "return"
+    },
+    {
+      "instrument": "GBPUSD",
+      "measure": "5m, fade the last bar, held one bar",
+      "n": 147951,
+      "gross_effect": 3.8596215483815825e-06,
+      "cost": 0.0001588423737745599,
+      "effect_over_cost": 0.02429843785802033,
+      "t_stat": 3.7153727906535656,
+      "label": "real but smaller than the cost",
+      "kind": "return"
+    },
+    {
+      "instrument": "GBPUSD",
+      "measure": "15m, follow the last bar, held one bar",
+      "n": 49503,
+      "gross_effect": -1.3085787978682129e-05,
+      "cost": 0.0001588423737745599,
+      "effect_over_cost": -0.08238222375884652,
+      "t_stat": -4.304078220501479,
+      "label": "real but smaller than the cost",
+      "kind": "return"
+    },
+    {
+      "instrument": "GBPUSD",
+      "measure": "15m, fade the last bar, held one bar",
+      "n": 49503,
+      "gross_effect": 1.3085787978682129e-05,
+      "cost": 0.0001588423737745599,
+      "effect_over_cost": 0.08238222375884652,
+      "t_stat": 4.304078220501479,
+      "label": "real but smaller than the cost",
+      "kind": "return"
+    },
+    {
+      "instrument": "GBPUSD",
+      "measure": "15m correlation of the size of one move with the size of the next 0.2998",
+      "n": 49503,
+      "gross_effect": null,
+      "cost": null,
+      "effect_over_cost": null,
+      "t_stat": 21.277130417928092,
+      "label": "not an up-or-down trade",
+      "kind": "correlation"
+    },
+    {
+      "instrument": "GBPUSD",
+      "measure": "after a top-10% 15m move, follow it, next 1h",
+      "n": 5776,
+      "gross_effect": -2.626840858428594e-05,
+      "cost": 0.0001588423737745599,
+      "effect_over_cost": -0.16537406209735875,
+      "t_stat": -1.1236525510994502,
+      "label": "nothing",
+      "kind": "return"
+    },
+    {
+      "instrument": "GBPUSD",
+      "measure": "after a top-10% 15m move, fade it, next 1h",
+      "n": 5776,
+      "gross_effect": 2.626840858428594e-05,
+      "cost": 0.0001588423737745599,
+      "effect_over_cost": 0.16537406209735875,
+      "t_stat": 1.1236525510994502,
+      "label": "nothing",
+      "kind": "return"
+    },
+    {
+      "instrument": "GBPUSD",
+      "measure": "60m, follow the last bar, held one bar",
+      "n": 12326,
+      "gross_effect": -7.171680086159962e-07,
+      "cost": 0.0001588423737745599,
+      "effect_over_cost": -0.004514966577078801,
+      "t_stat": -0.056013273997651575,
+      "label": "nothing",
+      "kind": "return"
+    },
+    {
+      "instrument": "GBPUSD",
+      "measure": "60m, fade the last bar, held one bar",
+      "n": 12326,
+      "gross_effect": 7.171680086159962e-07,
+      "cost": 0.0001588423737745599,
+      "effect_over_cost": 0.004514966577078801,
+      "t_stat": 0.056013273997651575,
+      "label": "nothing",
+      "kind": "return"
+    },
+    {
+      "instrument": "GBPUSD",
+      "measure": "60m correlation of the size of one move with the size of the next 0.2944",
+      "n": 12326,
+      "gross_effect": null,
+      "cost": null,
+      "effect_over_cost": null,
+      "t_stat": 17.06912344833528,
+      "label": "not an up-or-down trade",
+      "kind": "correlation"
+    },
+    {
+      "instrument": "GBPUSD",
+      "measure": "follow the first 15m after 07:00 UTC, next 4h",
+      "n": 519,
+      "gross_effect": 3.099320850317355e-05,
+      "cost": 0.0001588423737745599,
+      "effect_over_cost": 0.1951192730672815,
+      "t_stat": 0.23500801035832766,
+      "label": "nothing",
+      "kind": "return"
+    },
+    {
+      "instrument": "GBPUSD",
+      "measure": "follow the first 15m after 13:30 UTC, next 4h",
+      "n": 518,
+      "gross_effect": -6.805765100126615e-05,
+      "cost": 0.0001588423737745599,
+      "effect_over_cost": -0.4284602992514974,
+      "t_stat": -0.43875155042210534,
+      "label": "nothing",
+      "kind": "return"
+    },
+    {
+      "instrument": "USDJPY",
+      "measure": "5m, follow the last bar, held one bar",
+      "n": 148024,
+      "gross_effect": -1.1397431071256302e-07,
+      "cost": 0.0001221570025125703,
+      "effect_over_cost": -0.0009330149591779215,
+      "t_stat": -0.12003649318700335,
+      "label": "nothing",
+      "kind": "return"
+    },
+    {
+      "instrument": "USDJPY",
+      "measure": "5m, fade the last bar, held one bar",
+      "n": 148024,
+      "gross_effect": 1.1397431071256302e-07,
+      "cost": 0.0001221570025125703,
+      "effect_over_cost": 0.0009330149591779215,
+      "t_stat": 0.12003649318700335,
+      "label": "nothing",
+      "kind": "return"
+    },
+    {
+      "instrument": "USDJPY",
+      "measure": "15m, follow the last bar, held one bar",
+      "n": 49513,
+      "gross_effect": 2.7866889753022377e-06,
+      "cost": 0.0001221570025125703,
+      "effect_over_cost": 0.022812355558703888,
+      "t_stat": 0.9339783078613991,
+      "label": "nothing",
+      "kind": "return"
+    },
+    {
+      "instrument": "USDJPY",
+      "measure": "15m, fade the last bar, held one bar",
+      "n": 49513,
+      "gross_effect": -2.7866889753022377e-06,
+      "cost": 0.0001221570025125703,
+      "effect_over_cost": -0.022812355558703888,
+      "t_stat": -0.9339783078613991,
+      "label": "nothing",
+      "kind": "return"
+    },
+    {
+      "instrument": "USDJPY",
+      "measure": "15m correlation of the size of one move with the size of the next 0.2672",
+      "n": 49513,
+      "gross_effect": null,
+      "cost": null,
+      "effect_over_cost": null,
+      "t_stat": 17.20889418768852,
+      "label": "not an up-or-down trade",
+      "kind": "correlation"
+    },
+    {
+      "instrument": "USDJPY",
+      "measure": "after a top-10% 15m move, follow it, next 1h",
+      "n": 5845,
+      "gross_effect": 2.1225352543154382e-05,
+      "cost": 0.0001221570025125703,
+      "effect_over_cost": 0.1737546936039973,
+      "t_stat": 0.8375648311117508,
+      "label": "nothing",
+      "kind": "return"
+    },
+    {
+      "instrument": "USDJPY",
+      "measure": "after a top-10% 15m move, fade it, next 1h",
+      "n": 5845,
+      "gross_effect": -2.1225352543154382e-05,
+      "cost": 0.0001221570025125703,
+      "effect_over_cost": -0.1737546936039973,
+      "t_stat": -0.8375648311117508,
+      "label": "nothing",
+      "kind": "return"
+    },
+    {
+      "instrument": "USDJPY",
+      "measure": "60m, follow the last bar, held one bar",
+      "n": 12327,
+      "gross_effect": 2.6845438712119138e-05,
+      "cost": 0.0001221570025125703,
+      "effect_over_cost": 0.21976176690613103,
+      "t_stat": 2.1686929722177415,
+      "label": "real but smaller than the cost",
+      "kind": "return"
+    },
+    {
+      "instrument": "USDJPY",
+      "measure": "60m, fade the last bar, held one bar",
+      "n": 12327,
+      "gross_effect": -2.6845438712119138e-05,
+      "cost": 0.0001221570025125703,
+      "effect_over_cost": -0.21976176690613103,
+      "t_stat": -2.1686929722177415,
+      "label": "real but smaller than the cost",
+      "kind": "return"
+    },
+    {
+      "instrument": "USDJPY",
+      "measure": "60m correlation of the size of one move with the size of the next 0.2461",
+      "n": 12327,
+      "gross_effect": null,
+      "cost": null,
+      "effect_over_cost": null,
+      "t_stat": 9.985735626851675,
+      "label": "not an up-or-down trade",
+      "kind": "correlation"
+    },
+    {
+      "instrument": "USDJPY",
+      "measure": "follow the first 15m after 07:00 UTC, next 4h",
+      "n": 517,
+      "gross_effect": -0.00014914950634261574,
+      "cost": 0.0001221570025125703,
+      "effect_over_cost": -1.2209656693832827,
+      "t_stat": -1.2448779473137659,
+      "label": "nothing",
+      "kind": "return"
+    },
+    {
+      "instrument": "USDJPY",
+      "measure": "follow the first 15m after 13:30 UTC, next 4h",
+      "n": 519,
+      "gross_effect": 0.00020933680212442663,
+      "cost": 0.0001221570025125703,
+      "effect_over_cost": 1.7136700951947907,
+      "t_stat": 1.4634863214627452,
+      "label": "nothing",
+      "kind": "return"
+    },
+    {
+      "instrument": "Gold/Silver",
+      "measure": "ratio in the bottom 10%, gold minus silver over the next 4h",
+      "n": 114583,
+      "gross_effect": 8.571721220371004e-05,
+      "cost": 0.001653101487925023,
+      "effect_over_cost": 0.05185235923494479,
+      "t_stat": 0.40458392725402814,
+      "label": "nothing",
+      "kind": "return"
+    },
+    {
+      "instrument": "Gold/Silver",
+      "measure": "ratio in the top 10%, gold minus silver over the next 4h",
+      "n": 144288,
+      "gross_effect": -5.938412208384809e-05,
+      "cost": 0.001653101487925023,
+      "effect_over_cost": -0.035922853205090984,
+      "t_stat": -0.29898391111162753,
+      "label": "nothing",
+      "kind": "return"
+    },
+    {
+      "instrument": "EURUSD/GBPUSD",
+      "measure": "EURUSD last minute, GBPUSD next minute correlation 0.0052",
+      "n": 880343,
+      "gross_effect": null,
+      "cost": null,
+      "effect_over_cost": null,
+      "t_stat": 1.9537966101186728,
+      "label": "nothing",
+      "kind": "correlation"
+    },
+    {
+      "instrument": "EURUSD/GBPUSD",
+      "measure": "EURUSD last minute, follow it in GBPUSD, held one minute",
+      "n": 716566,
+      "gross_effect": 7.613626915210942e-07,
+      "cost": 0.0001588423737745599,
+      "effect_over_cost": 0.004793196383489413,
+      "t_stat": 3.1576518978795867,
+      "label": "real but smaller than the cost",
+      "kind": "return"
+    },
+    {
+      "instrument": "GBPUSD/EURUSD",
+      "measure": "GBPUSD last minute, EURUSD next minute correlation -0.0001",
+      "n": 880342,
+      "gross_effect": null,
+      "cost": null,
+      "effect_over_cost": null,
+      "t_stat": 0.2804132296210992,
+      "label": "nothing",
+      "kind": "correlation"
+    },
+    {
+      "instrument": "GBPUSD/EURUSD",
+      "measure": "GBPUSD last minute, follow it in EURUSD, held one minute",
+      "n": 724418,
+      "gross_effect": 4.169989006969803e-07,
+      "cost": 0.00010788345156130962,
+      "effect_over_cost": 0.003865272149362054,
+      "t_stat": 2.2097697764749276,
+      "label": "real but smaller than the cost",
+      "kind": "return"
+    }
+  ],
+  "missing": [],
+  "costs": {
+    "Gold": {
+      "median_spread": 0.00019099140022500377,
+      "commission": 7e-05,
+      "cost": 0.00026099140022500377,
+      "minutes": 874341
+    },
+    "Silver": {
+      "median_spread": 0.0013221100877000194,
+      "commission": 7e-05,
+      "cost": 0.0013921100877000193,
+      "minutes": 874318
+    },
+    "Light crude": {
+      "median_spread": 0.000610970587875865,
+      "commission": 7e-05,
+      "cost": 0.000680970587875865,
+      "minutes": 874212
+    },
+    "EURUSD": {
+      "median_spread": 3.788345156130963e-05,
+      "commission": 7e-05,
+      "cost": 0.00010788345156130962,
+      "minutes": 881998
+    },
+    "GBPUSD": {
+      "median_spread": 8.884237377455991e-05,
+      "commission": 7e-05,
+      "cost": 0.0001588423737745599,
+      "minutes": 880554
+    },
+    "USDJPY": {
+      "median_spread": 5.215700251257031e-05,
+      "commission": 7e-05,
+      "cost": 0.0001221570025125703,
+      "minutes": 881998
+    }
+  },
+  "binance_metals": {
+    "skipped": true,
+    "usable_days": 0,
+    "status": {
+      "XAUUSDT kline 2024-12": 404,
+      "XAGUSDT kline 2024-12": 404,
+      "XAUUSDT index 2024-12": 404
+    },
+    "reason": "Binance XAUUSDT and XAGUSDT perpetuals were not measured. The December 2024 archive is not there, and the contracts start in 2026, inside the sealed window. No file from 2025 onward was downloaded, so there is no pre-seal history and the sample is too short to judge."
+  },
+  "rows_measured": 78
+}
