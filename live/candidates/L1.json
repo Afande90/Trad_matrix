@@ -1,0 +1,17 @@
+{
+  "id": "L1",
+  "name": "BTC funding extreme",
+  "frozen": "2026-11-13",
+  "paper": true,
+  "opening_book": true,
+  "symbol": "BTCUSDT",
+  "market": "futures",
+  "direction": "UP",
+  "hold_hours": 8,
+  "rule": {
+    "kind": "funding_below_percentile",
+    "percentile": 0.10,
+    "lookback_days": 90,
+    "note": "Buy when a funding rate is below the 10th percentile of funding rates on the previous 90 days. That day is not part of the percentile. Entry is the next 1-minute open. Exit is the open 8 hours later. One position at a time. Funding is applied."
+  }
+}

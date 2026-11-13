@@ -1,0 +1,18 @@
+{
+  "id": "L2",
+  "name": "BTC crowding score",
+  "frozen": "2026-11-13",
+  "paper": true,
+  "opening_book": true,
+  "symbol": "BTCUSDT",
+  "market": "futures",
+  "direction": "UP",
+  "hold_hours": 4,
+  "rule": {
+    "kind": "crowding_score",
+    "percentile": 0.98,
+    "lookback_days": 30,
+    "feature_lookback_days": 60,
+    "note": "Once an hour, average three z-scores from the previous 30 days only. Futures-spot gap is futures close / spot close - 1, then multiplied by -1 so a cheap future (crowd short) is positive. Funding rate is multiplied by -1 so negative funding (shorts paying) is positive. The 1-hour fractional change in open interest is multiplied by -1 so a fall (forced out) is positive. Buy when this score is above the 98th percentile of scores on the previous 30 days. Entry is the next 1-minute open. Exit is the open 4 hours later. One position at a time. Funding is applied."
+  }
+}
